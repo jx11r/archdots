@@ -1,0 +1,12 @@
+# Ignore all
+/*
+
+# Files
+!.gitignore
+!.gitmodules
+!.xinitrc
+!.zshrc
+
+# Folders
+!.github
+!.config
