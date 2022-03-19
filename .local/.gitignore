@@ -1,0 +1,8 @@
+# Ignore all
+/*
+
+# Files
+!.gitignore
+
+# Folders
+!bin
