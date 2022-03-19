@@ -27,9 +27,9 @@ function git_prompt() {
       
       (( $vcs_status[1] )) ||
       (( $vcs_status[2] )) && signs+='%F{red}-%f'
-      (( $vcs_status[3] )) && signs+='%F{yellow}!%f'
-      (( $vcs_status[4] )) && signs+='%F{green}+%f'
-      (( $vcs_status[5] )) && signs+='%F{cyan}?%f'
+      (( $vcs_status[3] )) && signs+='%F{green}!%f'
+      (( $vcs_status[4] )) && signs+='%F{yellow}+%f'
+      (( $vcs_status[5] )) && signs+='%F{blue}?%f'
 
       RPROMPT+="%B${signs}%b"
     }
