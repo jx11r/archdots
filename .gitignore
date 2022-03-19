@@ -5,6 +5,7 @@
 !.gitignore
 !.gitmodules
 !.xinitrc
+!.zprofile
 !.zshrc
 
 # Folders
