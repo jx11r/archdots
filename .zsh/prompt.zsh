@@ -31,7 +31,7 @@ function git_prompt() {
       (( $vcs_status[4] )) && signs+='%F{green}+%f'
       (( $vcs_status[5] )) && signs+='%F{cyan}?%f'
 
-      RPROMPT+="%B${signs}%b "
+      RPROMPT+="%B${signs}%b"
     }
 
     (( VCS_STATUS_HAS_CONFLICTED )) && {
@@ -41,7 +41,7 @@ function git_prompt() {
     }
 
     [[ $(pwd) != $HOME ]] && {
-      RPROMPT+="%B%F{${color}}${VCS_STATUS_LOCAL_BRANCH}%f%b"
+      RPROMPT+="%B%F{${color}} ${VCS_STATUS_LOCAL_BRANCH}%f%b"
     }
   fi
 }
