@@ -1,0 +1,39 @@
+# --==[ Colors ]==--
+import:
+  - ~/.config/alacritty/colors/material_ocean.yml
+
+# --==[ Settings ]==--
+env:
+  TERM: xterm-256color
+
+window:
+  padding:
+    x: 12
+    y: 10
+
+  opacity: 1.0
+
+scrolling:
+  multiplier: 3
+
+font:
+  normal:
+    family: CaskaydiaCove Nerd Font Mono
+    style: Regular
+
+  bold:
+    family: CaskaydiaCove Nerd Font Mono
+    style: Bold
+
+  italic:
+    family: CaskaydiaCove Nerd Font Mono
+    style: Italic
+
+  size: 10
+
+cursor:
+  style:
+    shape: Block
+
+mouse:
+  hide_when_typing: true
