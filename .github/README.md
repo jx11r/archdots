@@ -18,7 +18,7 @@
   <img align="right" height="100" alt="Arch" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Archlinux-icon-crystal-64.svg" />
 </a>
 
-Keep It Simple, Stupid! This is my **$HOME** directory so not much to see here,
+*Keep It Simple, Stupid!* This is my **$HOME** directory so not much to see here,
 I deleted my old repository (it was bloated) and now I'll try to make it simpler.
 Finally, if you're here for some config, here's a list of my stuff:
 + **WM**: [Qtile](https://github.com/jx11r/qtile)
