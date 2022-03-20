@@ -23,12 +23,12 @@ I deleted my old repository (it was bloated) and now I'll try to make it simpler
 if you're here for some config, here's a list of my stuff:
 + **WM**: [Qtile](https://github.com/jx11r/qtile)
 + **Bar**: Default qtile bar
-+ **Shell**: [zsh](/.zsh) (from scratch)
++ **Shell**: [zsh](/.zsh/) (from scratch)
 + **Terminal**: [Alacritty](/.config/alacritty/alacritty.yml)
 + **Editor:** [Neovim](https://github.com/jx11r/nvim), [Doom Emacs](https://github.com/hlissner/doom-emacs)
 + **File Manager**: Thunar, Ranger
 + **Compositor**: jonaburg's [Picom](/.config/picom/picom.conf) fork
-+ **Launcher**: [Rofi](/.config/rofi)
++ **Launcher**: [Rofi](/.config/rofi/)
 
 ## Table of Contents
 > - [Archdots](#archdots)
