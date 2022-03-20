@@ -1,5 +1,6 @@
-# Ignore all
+# Ignore
 /*
+.local/share
 
 # Files
 !.gitignore
