@@ -15,12 +15,12 @@
 </div><br>
 
 <a href="https://archlinux.org">
-  <img align="right" height="100" alt="Arch" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Archlinux-icon-crystal-64.svg" />
+  <img align="right" height="80" alt="Arch" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Archlinux-icon-crystal-64.svg" />
 </a>
 
-*Keep It Simple, Stupid!* This is my **$HOME** directory so not much to see here,
-I deleted my old repository (it was bloated) and now I'll try to make it simpler.
-Finally, if you're here for some config, here's a list of my stuff:
+*Keep It Simple, Stupid!* This is my **$HOME** directory,
+I deleted my old repository (it was bloated) and now I'll try to make it simpler,
+if you're here for some config, here's a list of my stuff:
 + **WM**: [Qtile](https://github.com/jx11r/qtile)
 + **Bar**: Default qtile bar
 + **Shell**: [zsh](/.zsh) (from scratch)
@@ -35,7 +35,7 @@ Finally, if you're here for some config, here's a list of my stuff:
 >   - [Why Arch?](#why-arch)
 >   - [Installation](#installation)
 >     - [Guide](#guide)
->     - [Configurations](#configurations)
+>     - [Setup](#setup)
 >   - [Roadmap](#roadmap)
 
 ## Why Arch?
@@ -45,19 +45,18 @@ Arch Linux is an independently developed, x86-64 general-purpose GNU/Linux distr
 ### Guide
 - *in progress*
 
-### Configurations
+### Setup
 *On a clean Arch install, follow these commands:*
 ```shell
 # Clean home directory (don't do if you have important files)
 rm -rf $HOME/*
 
-# Clone this repository
+# Clone this repository in your home directory
 git clone --depth 1 https://github.com/jx11r/archdots.git $HOME
 ```
 
 ## Roadmap
-- [ ] Add Arch Linux installation guide
-- [ ] Add an installer script (packages)
+- [ ] Add installation guide
 - [ ] Add gallery section (screenshots)
 - [ ] Add more configurations
 - [ ] Add git submodules
