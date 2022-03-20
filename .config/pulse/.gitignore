@@ -1,0 +1,6 @@
+# Ignore all
+/*
+
+# Files
+!.gitignore
+!daemon.conf
