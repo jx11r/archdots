@@ -15,12 +15,11 @@
 </div><br>
 
 <a href="https://archlinux.org">
-  <img align="right" height="80" alt="Arch" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Archlinux-icon-crystal-64.svg" />
+  <img align="right" height="100" alt="Arch" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Archlinux-icon-crystal-64.svg" />
 </a>
 
 *Keep It Simple, Stupid!* This is my **$HOME** directory,
-I deleted my old repository (it was bloated) and now I'll try to make it simpler,
-if you're here for some config, here's a list of my stuff:
+I deleted my old repository (it was bloated) and now I'll try to make it simpler.
 + **WM**: [Qtile](https://github.com/jx11r/qtile)
 + **Bar**: Default qtile bar
 + **Shell**: [zsh](https://github.com/jx11r/archdots/tree/master/.zsh) (from scratch)
