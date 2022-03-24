@@ -1,6 +1,7 @@
 # --==[ Colors ]==--
 import:
-  - ~/.config/alacritty/colors/material_ocean.yml
+  - ~/.config/alacritty/colors/gruvbox_material.yml
+  # - ~/.config/alacritty/colors/material_ocean.yml
 
 # --==[ Settings ]==--
 env:
