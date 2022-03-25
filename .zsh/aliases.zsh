@@ -25,6 +25,7 @@ alias ga='git add'
 alias gb='git branch'
 alias gco='git checkout'
 alias gsw='git switch'
+alias gst='git stash'
 alias gcm='git commit -m'
 alias gcma='git commit -a -m'
 
