@@ -31,7 +31,7 @@ function git_prompt() {
       (( $vcs_status[4] )) && signs+='%F{yellow}+%f'
       (( $vcs_status[5] )) && signs+='%F{blue}?%f'
 
-      RPROMPT+="%B${signs}%b"
+      SIGNS="%B${signs}%b"
     }
 
     (( VCS_STATUS_HAS_CONFLICTED )) && {
@@ -41,15 +41,21 @@ function git_prompt() {
     }
 
     [[ $(pwd) != $HOME ]] && {
-      RPROMPT+="%B%F{${color}} ${VCS_STATUS_LOCAL_BRANCH}%f%b"
+      BRANCH="%B%F{${color}}${VCS_STATUS_LOCAL_BRANCH}%f%b "
     }
   fi
 }
 
 function set_prompt() {
-  PROMPT='%B%F{cyan}%1~%f%b %F{%(?.magenta.red)}❯ %f'
-  RPROMPT=''
+  BRANCH=''
+  SIGNS=''
   git_prompt
+
+  PROMPT='%B%F{cyan}%1~%f%b ' 
+  PROMPT+=${BRANCH}
+  PROMPT+='%F{%(?.magenta.red)}❯ %f'
+
+  RPROMPT=${SIGNS}
 
   setopt no_prompt_{bang,subst} prompt_percent
 }
