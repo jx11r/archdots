@@ -41,8 +41,7 @@ function git_prompt() {
     }
 
     [[ $(pwd) != $HOME ]] && {
-      BRANCH='%F{yellow}%f '
-      BRANCH+="%B%F{${color}}${VCS_STATUS_LOCAL_BRANCH}%f%b "
+      BRANCH="%B%F{${color}} ${VCS_STATUS_LOCAL_BRANCH}%f%b "
     }
   fi
 }
