@@ -37,11 +37,12 @@ function git_prompt() {
     (( VCS_STATUS_HAS_CONFLICTED )) && {
       local color='red'
     } || {
-      local color='magenta'
+      local color='yellow'
     }
 
     [[ $(pwd) != $HOME ]] && {
-      BRANCH="%B%F{${color}}${VCS_STATUS_LOCAL_BRANCH}%f%b "
+      BRANCH='%F{yellow}%f '
+      BRANCH+="%B%F{${color}}${VCS_STATUS_LOCAL_BRANCH}%f%b "
     }
   fi
 }
