@@ -37,7 +37,7 @@ function git_prompt() {
     (( VCS_STATUS_HAS_CONFLICTED )) && {
       local color='red'
     } || {
-      local color='magenta'
+      local color='yellow'
     }
 
     [[ $(pwd) != $HOME ]] && {
@@ -53,7 +53,7 @@ function set_prompt() {
 
   PROMPT='%B%F{cyan}%1~%f%b ' 
   PROMPT+=${BRANCH}
-  PROMPT+='%F{%(?.yellow.red)}❯ %f'
+  PROMPT+='%F{%(?.magenta.red)}❯ %f'
 
   RPROMPT=${SIGNS}
 
