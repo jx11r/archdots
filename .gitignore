@@ -1,6 +1,7 @@
 # Ignore
 /*
 .local/share
+.local/lib
 
 # Files
 !.gitignore
