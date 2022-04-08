@@ -19,7 +19,7 @@
 </a>
 
 *Keep It Simple, Stupid!* This is my **$HOME** directory,
-I deleted my old repository (it was bloated) and now I'll try to make it simpler.
+I remove my old repository (deprecated/bloated) and now I'll try to make it simpler.
 
 
 *My setup:*
@@ -34,14 +34,10 @@ I deleted my old repository (it was bloated) and now I'll try to make it simpler
 
 ## Table of Contents
 > - [Archdots](#archdots)
->   - [Why Arch?](#why-arch)
 >   - [Installation](#installation)
 >     - [Guide](#guide)
 >     - [Dotfiles](#dotfiles)
 >   - [Roadmap](#roadmap)
-
-## Why Arch?
-Arch Linux is an independently developed, x86-64 general-purpose GNU/Linux distribution that strives to provide the latest stable versions of most software by following a rolling-release model. The default installation is a minimal base system, configured by the user to only add what is purposely required.
 
 ## Installation
 ### Guide
