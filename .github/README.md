@@ -19,7 +19,7 @@
 </a>
 
 *Keep It Simple, Stupid!* This is my **$HOME** directory,
-I remove my old repository (deprecated/bloated) and now I'll try to make it simpler.
+I remove my old repository (deprecated and bloated) and now I'll try to make it simpler.
 
 
 *My setup:*
