@@ -15,14 +15,9 @@
 </div><br>
 
 <a href="https://archlinux.org">
-  <img align="left" height="80" alt="Arch" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Archlinux-icon-crystal-64.svg" />
+  <img align="right" height="125" alt="Arch" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Archlinux-icon-crystal-64.svg" />
 </a>
 
-*Keep It Simple, Stupid!* This is my **$HOME** directory,
-I remove my old repository (deprecated and bloated) and now I'll try to make it simpler.
-
-
-*My setup:*
 + **WM**: [Qtile](https://github.com/jx11r/qtile)
 + **Bar**: Default qtile bar
 + **Shell**: [zsh](https://github.com/jx11r/archdots/tree/master/.zsh) (from scratch)
@@ -34,27 +29,9 @@ I remove my old repository (deprecated and bloated) and now I'll try to make it 
 
 ## Table of Contents
 > - [Archdots](#archdots)
->   - [Installation](#installation)
->     - [Guide](#guide)
->     - [Dotfiles](#dotfiles)
 >   - [Roadmap](#roadmap)
 
-## Installation
-### Guide
-- *in progress*
-
-### Dotfiles
-*On a clean Arch install, follow these commands:*
-```shell
-# Clean home directory (don't do if you have important files)
-rm -rf $HOME/*
-
-# Clone this repository in your home directory
-git clone --depth 1 https://github.com/jx11r/archdots.git $HOME
-```
-
 ## Roadmap
-- [ ] Add installation guide
 - [ ] Add gallery section (screenshots)
 - [ ] Add more configurations
 - [ ] Add git submodules
