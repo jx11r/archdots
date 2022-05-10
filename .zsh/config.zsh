@@ -50,3 +50,6 @@ bindkey '^L' clear-screen                          # ctrl + l
 
 # --==[ Exports ]==--
 export PATH="${HOME}/.local/bin:${PATH}"
+
+# --==[ Autostart ]==--
+unset XDG_SEAT # fix 'unrecognised device identifier' warning
