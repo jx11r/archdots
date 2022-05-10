@@ -8,6 +8,10 @@ alias dload='curl -O'
 alias grep='grep --color=auto'
 alias pacman='sudo pacman'
 
+# Xephyr
+alias Xone='Xephyr -screen 720x480 :1'
+alias Xtwo='Xephyr -screen 640x480 -screen 640x480 +xinerama :1'
+
 # Files
 alias ls='exa --group-directories-first'
 alias ll='exa -la --group-directories-first'
