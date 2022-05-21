@@ -7,6 +7,7 @@ alias tar='tar -xf'
 alias dload='curl -O'
 alias grep='grep --color=auto'
 alias pacman='sudo pacman'
+alias mirror='sudo reflector --sort rate -l 5 --save /etc/pacman.d/mirrorlist'
 
 # Xephyr
 alias Xone='Xephyr -screen 720x480 :1'
