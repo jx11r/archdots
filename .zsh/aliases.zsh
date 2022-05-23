@@ -6,6 +6,7 @@ alias cl='clear'
 alias tar='tar -xf'
 alias dload='curl -O'
 alias grep='grep --color=auto'
+alias yay='yay --aur'
 alias pacman='sudo pacman'
 alias mirror='sudo reflector --sort rate -l 5 --save /etc/pacman.d/mirrorlist'
 
