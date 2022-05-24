@@ -52,4 +52,7 @@ bindkey '^L' clear-screen                          # ctrl + l
 export PATH="${HOME}/.local/bin:${PATH}"
 
 # --==[ Autostart ]==--
-unset XDG_SEAT # fix 'unrecognised device identifier' warning
+unset XDG_SEAT
+[[ -e ~/.ssh/github ]] && {
+  { eval `ssh-agent`; ssh-add ~/.ssh/github; } &>/dev/null
+}
