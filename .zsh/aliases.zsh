@@ -6,9 +6,9 @@ alias cl='clear'
 alias tar='tar -xf'
 alias dload='curl -O'
 alias grep='grep --color=auto'
-alias yay='yay --aur'
 alias pacman='sudo pacman'
 alias mirror='sudo reflector --sort rate -l 5 --save /etc/pacman.d/mirrorlist'
+alias yay='yay --aur --devel --nocleanmenu --nodiffmenu --noeditmenu --removemake'
 
 # Xephyr
 alias Xone='Xephyr -screen 720x480 :1'
