@@ -19,12 +19,12 @@
 </a>
 
 + **WM**: [Qtile](https://github.com/jx11r/qtile)
-+ **Bar**: Default qtile bar
++ **Bar**: Qtile's Bar
 + **Shell**: [zsh](https://github.com/jx11r/archdots/tree/master/.zsh) (from scratch)
 + **Terminal**: [Alacritty](/.config/alacritty/alacritty.yml)
 + **Editor:** [Neovim](https://github.com/jx11r/nvim), [Doom Emacs](https://github.com/hlissner/doom-emacs)
 + **File Manager**: Thunar, Ranger
-+ **Compositor**: jonaburg's [Picom](/.config/picom/picom.conf) fork
++ **Compositor**: [Picom](/.config/picom/picom.conf)
 + **Launcher**: [Rofi](https://github.com/jx11r/archdots/tree/master/.config/rofi)
 
 ## Table of Contents
