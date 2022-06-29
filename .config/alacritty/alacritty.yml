@@ -11,7 +11,7 @@ window:
     x: 12
     y: 10
 
-  dynamic_padding: true
+  dynamic_padding: false
   decorations: None
   opacity: 1.0
   dynamic_title: true
