@@ -22,19 +22,34 @@
 + **Bar**: Qtile's Bar
 + **Shell**: [zsh](https://github.com/jx11r/archdots/tree/master/.zsh) (from scratch)
 + **Terminal**: [Alacritty](/.config/alacritty/alacritty.yml)
-+ **Editor:** [Neovim](https://github.com/jx11r/nvim), [Doom Emacs](https://github.com/hlissner/doom-emacs)
-+ **File Manager**: Thunar, Ranger
++ **Editor:** [Neovim](https://github.com/jx11r/nvim)
++ **File Manager**: Thunar
 + **Compositor**: [Picom](/.config/picom/picom.conf)
 + **Launcher**: [Rofi](https://github.com/jx11r/archdots/tree/master/.config/rofi)
 
 ## Table of Contents
 > - [Archdots](#archdots)
+>   - [Dependencies](#dependencies)
 >   - [Roadmap](#roadmap)
+
+## Dependencies
+Packages used in this repository:
+- alacritty
+- bat
+- exa
+- gitstatus (AUR)
+- nerd-fonts-cascadia-code (AUR)
+- papirus-icon-theme
+- picom
+- rofi
+- xorg-xinit
+- zsh
+- zsh-autosuggestions
+- zsh-syntax-highlighting
 
 ## Roadmap
 - [ ] Add gallery section (screenshots)
 - [ ] Add more configurations
-- [ ] Add git submodules
 
 <p align="center">
   <a href="https://github.com/jx11r/archdots/blob/master/LICENSE">
