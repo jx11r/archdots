@@ -4,6 +4,7 @@
 .local/lib
 
 # Files
+!.gitconfig
 !.gitignore
 !.gitmodules
 !.xinitrc
