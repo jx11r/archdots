@@ -27,9 +27,6 @@ set -e
 sep="${cl6}::${reset}"
 line="${cl5} ->${reset}"
 
-echo -en "${sep} Insert the console keyboard layout: "
-read keyboard
-
 echo -e "${sep} Installing essential packages..."
 pacstrap /mnt base base-devel efibootmgr git grub gvfs linux linux-firmware nano networkmanager os-prober
 
@@ -37,7 +34,7 @@ echo -e "${sep} Generating fstab file..."
 genfstab -U /mnt >> /mnt/etc/fstab
 
 echo -e "${sep} Changing system root..."
-arch-chroot /mnt
+arch-chroot /mnt << EOF
 
 echo -e "${sep} Done, now configuring the system..."
 echo -e "${line} Set the time zone. (1/13)"
@@ -48,6 +45,9 @@ echo -e "${line} Set up localization. (2/13)"
 sed -i "s/#en_US.UTF-8/en_US.UTF-8/"
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 locale-gen
+
+echo -en "${sep} Insert the console keyboard layout: "
+read keyboard
 
 echo -e "${line} Set the console keyboard layout. (3/13)"
 echo KEYMAP=$keyboard > etc/vconsole.conf
@@ -85,5 +85,7 @@ grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=ArchL
 
 echo -e "${line} Generate the GRUB configuration file. (13/13)"
 grub-mkconfig -o /boot/grub/grub.cfg
+
+EOF
 
 echo -e "${sep} Setup completed, you can reboot this PC."
