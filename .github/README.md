@@ -20,12 +20,12 @@
 
 + **WM**: [Qtile](https://github.com/jx11r/qtile)
 + **Bar**: Qtile's Bar
-+ **Shell**: [zsh](https://github.com/jx11r/archdots/tree/master/.zsh) (from scratch)
++ **Shell**: [zsh](https://github.com/jx11r/archdots/tree/main/.zsh) (from scratch)
 + **Terminal**: [Alacritty](/.config/alacritty/alacritty.yml)
 + **Editor:** [Neovim](https://github.com/jx11r/nvim)
 + **File Manager**: Thunar
 + **Compositor**: [Picom](/.config/picom/picom.conf)
-+ **Launcher**: [Rofi](https://github.com/jx11r/archdots/tree/master/.config/rofi)
++ **Launcher**: [Rofi](https://github.com/jx11r/archdots/tree/main/.config/rofi)
 
 ## Table of Contents
 > - [Archdots](#archdots)
@@ -52,7 +52,7 @@
 - [ ] Add more configurations
 
 <p align="center">
-  <a href="https://github.com/jx11r/archdots/blob/master/LICENSE">
+  <a href="https://github.com/jx11r/archdots/blob/main/LICENSE">
     <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=GPL-3.0&colorA=1e1e2e&colorB=b4befe"/>
   </a>
 </p>
