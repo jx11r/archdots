@@ -33,19 +33,19 @@
 >   - [Roadmap](#roadmap)
 
 ## Dependencies
-Packages used in this repository:
-- alacritty
-- bat
-- exa
-- gitstatus (AUR)
-- nerd-fonts-cascadia-code (AUR)
-- papirus-icon-theme
-- picom
-- rofi
-- xorg-xinit
-- zsh
-- zsh-autosuggestions
-- zsh-syntax-highlighting
+- Packages used in this repository:
+  - alacritty
+  - bat
+  - exa
+  - gitstatus (AUR)
+  - nerd-fonts-cascadia-code (AUR)
+  - papirus-icon-theme
+  - picom
+  - rofi
+  - xorg-xinit
+  - zsh
+  - zsh-autosuggestions
+  - zsh-syntax-highlighting
 
 ## Roadmap
 - [ ] Add gallery section (screenshots)
