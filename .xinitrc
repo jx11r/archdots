@@ -10,5 +10,8 @@ xset -dpms s off
 # Compositor
 picom &
 
+# Notification Daemon
+wired &
+
 # Start WM
 exec qtile start
