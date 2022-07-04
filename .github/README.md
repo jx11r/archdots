@@ -42,6 +42,7 @@
   - papirus-icon-theme
   - picom
   - rofi
+  - wired (AUR)
   - xorg-xinit
   - zsh
   - zsh-autosuggestions
