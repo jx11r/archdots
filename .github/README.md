@@ -20,7 +20,7 @@
 
 + **WM**: [Qtile](https://github.com/jx11r/qtile)
 + **Bar**: Qtile's Bar
-+ **Shell**: [zsh](https://github.com/jx11r/archdots/tree/main/.zsh) (from scratch)
++ **Shell**: [zsh](https://github.com/jx11r/archdots/tree/main/.zsh)
 + **Terminal**: [Alacritty](/.config/alacritty/alacritty.yml)
 + **Editor:** [Neovim](https://github.com/jx11r/nvim)
 + **File Manager**: Thunar
