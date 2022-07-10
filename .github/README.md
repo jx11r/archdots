@@ -10,7 +10,7 @@
     <img src="https://img.shields.io/github/stars/jx11r/archdots?style=for-the-badge&logo=starship&color=94e2d5&logoColor=cdd6f4&labelColor=1e1e2e" />
   </a>
   <a href="#">
-    <img src="https://badges.pufler.dev/visits/jx11r/archdots?style=for-the-badge&logo=github&color=cba6f7&logoColor=cdd6f4&labelColor=1e1e2e" />
+    <img src="https://shields-io-visitor-counter.herokuapp.com/badge?page=jx11r.archdots&style=for-the-badge&logo=github&color=cba6f7&logoColor=cdd6f4&labelColor=1e1e2e">
   </a>
 </div><br>
 
