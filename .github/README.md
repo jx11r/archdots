@@ -39,6 +39,8 @@
   - exa
   - gitstatus (AUR)
   - nerd-fonts-cascadia-code (AUR)
+  - noto-fonts
+  - noto-fonts-cjk
   - papirus-icon-theme
   - picom
   - rofi
