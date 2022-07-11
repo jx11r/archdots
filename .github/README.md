@@ -40,7 +40,7 @@
   - gitstatus (AUR)
   - nerd-fonts-cascadia-code (AUR)
   - noto-fonts
-  - noto-fonts-cjk
+  - noto-fonts-cjk (Optional)
   - papirus-icon-theme
   - picom
   - rofi
