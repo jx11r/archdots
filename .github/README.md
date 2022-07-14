@@ -29,11 +29,10 @@
 
 ## Table of Contents
 > - [Archdots](#archdots)
->   - [Dependencies](#dependencies)
+>   - [Requirements](#requirements)
 >   - [Roadmap](#roadmap)
 
-## Dependencies
-Packages used in this repository:
+## Requirements
 - alacritty
   - nerd-fonts-cascadia-code (AUR)
 - gnome-keyring
