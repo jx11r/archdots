@@ -1,21 +1,21 @@
-# --==[ History File ]==--
+# History File
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 setopt appendhistory
 
-# --==[ Autocomplete ]==--
+# Autocomplete
 # zstyle ':completion:*' menu select=0
 # zstyle ':completion:*' format '  %d'
 # zmodload zsh/complist
 # autoload -Uz compinit
 # compinit
 
-# --==[ Plugins ]==--
+# Plugins
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# --==[ Highlighting ]==--
+# Highlighting
 typeset -A ZSH_HIGHLIGHT_STYLES
   ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red'
   ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=magenta'
@@ -31,7 +31,7 @@ typeset -A ZSH_HIGHLIGHT_STYLES
   ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=magenta'
   ZSH_HIGHLIGHT_STYLES[redirection]='fg=cyan'
 
-# --==[ Key Bindings ]==--
+# Key Bindings
 bindkey '^ ' autosuggest-accept                    # ctrl + space
 bindkey '^[[7~' beginning-of-line                  # ctrl + a
 bindkey '^[[8~' end-of-line                        # ctrl + e
@@ -48,11 +48,11 @@ bindkey '^K' backward-kill-line                    # ctrl + k
 bindkey '^[[Z' undo                                # shift + tab
 bindkey '^L' clear-screen                          # ctrl + l
 
-# --==[ Exports ]==--
+# Exports
 export PATH="${HOME}/.local/bin:${PATH}"
 
-# --==[ Autostart ]==--
+# Autostart
 unset XDG_SEAT
-[[ -e ~/.ssh/github ]] && {
-  { eval `ssh-agent`; ssh-add -q ~/.ssh/github; } &>/dev/null
+[[ -e ~/.ssh/key ]] && {
+  { eval `ssh-agent`; ssh-add -q ~/.ssh/key; } &>/dev/null
 }
