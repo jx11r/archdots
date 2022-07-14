@@ -33,20 +33,23 @@
 >   - [Roadmap](#roadmap)
 
 ## Dependencies
-- Packages used in this repository:
-  - alacritty
+Packages used in this repository:
+- alacritty
+  - nerd-fonts-cascadia-code (AUR)
+- gnome-keyring
+  - libsecret
+  - openssh
+- picom
+- rofi
+  - papirus-icon-theme
+- wired (AUR)
+  - noto-fonts
+  - noto-fonts-cjk (Optional)
+- xorg-xinit
+- zsh
   - bat
   - exa
   - gitstatus (AUR)
-  - nerd-fonts-cascadia-code (AUR)
-  - noto-fonts
-  - noto-fonts-cjk (Optional)
-  - papirus-icon-theme
-  - picom
-  - rofi
-  - wired (AUR)
-  - xorg-xinit
-  - zsh
   - zsh-autosuggestions
   - zsh-syntax-highlighting
 
