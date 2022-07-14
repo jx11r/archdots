@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 reset="\033[0m"
 yellow="\033[1;33m"
