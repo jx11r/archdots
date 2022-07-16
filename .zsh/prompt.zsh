@@ -1,66 +1,94 @@
 # --==[ Prompt + Git ]==--
 autoload -U colors && colors
 autoload -Uz add-zsh-hook
-source /usr/share/gitstatus/gitstatus.prompt.zsh
+source /usr/share/gitstatus/gitstatus.plugin.zsh
 
 # Fix useless space (right prompt)
-ZLE_RPROMPT_INDENT=0
+# ZLE_RPROMPT_INDENT=0
 
-function git_prompt() {
+function preexec() {
+  timer=$(($(date +%s%0N) / 1000000000))
+}
+
+function precmd() {
+  [ $timer ] && {
+    local seconds=$(($(date +%s%0N) / 1000000000 - $timer))
+    local x=$seconds
+
+    (( $seconds > 59 )) && {
+      local minutes=$(($seconds / 60))
+      (( $minutes > 59 )) && {
+        local hours=$(($minutes / 60))
+        minutes=$(($minutes - $hours * 60))
+        time=$(echo $hours'h' $minutes'm' | sed 's/\s0m$//g')
+      } || {
+        seconds=$(($seconds - $minutes * 60))
+        time=$(echo $minutes'm' $seconds's' | sed 's/\s0s$//g')
+      }
+    } || {
+      time=$seconds's'
+    }
+
+    (( $x > 14 )) && elapsed="%F{yellow}took ${time}%f "
+
+    unset timer time
+  }
+}
+
+function gitstatus() {
   if gitstatus_query MY && [[ $VCS_STATUS_RESULT == ok-sync ]]; then
-    declare -A vcs_status
-      vcs_status[1]=$VCS_STATUS_NUM_UNSTAGED_DELETED
-      vcs_status[2]=$VCS_STATUS_NUM_STAGED_DELETED
-      vcs_status[3]=$VCS_STATUS_HAS_UNSTAGED
-      vcs_status[4]=$VCS_STATUS_HAS_STAGED
-      vcs_status[5]=$VCS_STATUS_HAS_UNTRACKED
+    declare -A VCS_STATUS
+      VCS_STATUS[1]=$VCS_STATUS_NUM_UNSTAGED_DELETED
+      VCS_STATUS[2]=$VCS_STATUS_NUM_STAGED_DELETED
+      VCS_STATUS[3]=$VCS_STATUS_HAS_UNSTAGED
+      VCS_STATUS[4]=$VCS_STATUS_HAS_STAGED
+      VCS_STATUS[5]=$VCS_STATUS_HAS_UNTRACKED
 
-    for value in ${vcs_status[@]}; do
+    for value in ${VCS_STATUS[@]}; do
       [[ $value > 0 ]] && {
-        local git_status=true
+        local show_status=true
         break
       }
     done
 
-    [ $git_status ] && {
+    [ $show_status ] && {
       local signs=''
-      
-      (( $vcs_status[1] )) ||
-      (( $vcs_status[2] )) && signs+='%F{red}-%f'
-      (( $vcs_status[3] )) && signs+='%F{green}!%f'
-      (( $vcs_status[4] )) && signs+='%F{yellow}+%f'
-      (( $vcs_status[5] )) && signs+='%F{blue}?%f'
 
-      SIGNS="%B${signs}%b"
-    }
+      (( $VCS_STATUS[1] )) ||
+      (( $VCS_STATUS[2] )) && signs+='-'
+      (( $VCS_STATUS[3] )) && signs+='!'
+      (( $VCS_STATUS[4] )) && signs+='+'
+      (( $VCS_STATUS[5] )) && signs+='?'
 
-    (( VCS_STATUS_HAS_CONFLICTED )) && {
-      local color='red'
+      local signs="%F{red}[${signs}]%f "
     } || {
-      local color='yellow'
+      unset VCS_STATUS
     }
 
-    [[ $(pwd) != $HOME ]] && {
-      BRANCH="%B%F{${color}} "
-      BRANCH+=${${VCS_STATUS_LOCAL_BRANCH:-@${VCS_STATUS_COMMIT[1, 7]}}}
-      BRANCH+="%f%b "
-    }
+    (( VCS_STATUS_HAS_CONFLICTED )) && \
+      { local color='red' } || { local color='magenta' }
+
+    if [[ -n $VCS_STATUS_LOCAL_BRANCH ]]; then
+      local where=$VCS_STATUS_LOCAL_BRANCH
+    elif [[ -n $VCS_STATUS_TAG ]]; then
+      local where='#'$VCS_STATUS_TAG
+    else
+      local where='@'${VCS_STATUS_COMMIT[1,7]}
+    fi
+
+    echo "%F{${color}} ${where}%f ${signs}"
   fi
 }
 
-function set_prompt() {
-  BRANCH=''
-  SIGNS=''
-  git_prompt
-
-  PROMPT='%B%F{cyan}%1~%f%b ' 
-  PROMPT+=${BRANCH}
-  PROMPT+='%F{%(?.magenta.red)}❯ %f'
-
-  RPROMPT=${SIGNS}
+function main() {
+  PROMPT='%B%F{cyan}%1~'
+  [[ $(pwd) == $HOME ]] && PROMPT+='/%f ' || PROMPT+='%f '
+  PROMPT+=$(gitstatus)
+  PROMPT+=${elapsed}
+  PROMPT+='%F{%(?.green.red)}❯ %f%b'
 
   setopt no_prompt_{bang,subst} prompt_percent
 }
 
 gitstatus_stop 'MY' && gitstatus_start -s -1 -u -1 -c -1 -d -1 'MY'
-add-zsh-hook precmd set_prompt
+add-zsh-hook precmd main
