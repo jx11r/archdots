@@ -29,7 +29,7 @@ function precmd() {
       time=$seconds's'
     }
 
-    (( $x > 14 )) && elapsed="%F{yellow}took ${time}%f "
+    (( $x > 14 )) && elapsed="took ${time} " || elapsed=''
 
     unset timer time
   }
@@ -81,10 +81,9 @@ function gitstatus() {
 }
 
 function main() {
-  PROMPT='%B%F{cyan}%1~'
-  [[ $(pwd) == $HOME ]] && PROMPT+='/%f ' || PROMPT+='%f '
+  PROMPT='%B%F{cyan}%1~%f '
   PROMPT+=$(gitstatus)
-  PROMPT+=${elapsed}
+  PROMPT+="%F{yellow}${elapsed}%f"
   PROMPT+='%F{%(?.green.red)}❯ %f%b'
 
   setopt no_prompt_{bang,subst} prompt_percent
