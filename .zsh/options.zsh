@@ -15,13 +15,6 @@ setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 setopt INTERACTIVE_COMMENTS
 
-# Autocomplete
-# zstyle ':completion:*' menu select=0
-# zstyle ':completion:*' format '  %d'
-# zmodload zsh/complist
-# autoload -Uz compinit
-# compinit
-
 # Highlighting
 typeset -A ZSH_HIGHLIGHT_STYLES
   ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red'
@@ -86,13 +79,3 @@ bindkey '^L' clear-screen                          # ctrl + l
 # Plugins
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Exports
-export PATH="${HOME}/.local/bin:${PATH}"
-
-# Autostart
-unset XDG_SEAT
-
-[[ -e ~/.ssh/key ]] && {
-  { eval `ssh-agent`; ssh-add -q ~/.ssh/key; } &>/dev/null
-}
