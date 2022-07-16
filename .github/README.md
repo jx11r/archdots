@@ -19,13 +19,13 @@
 </a>
 
 + **WM**: [Qtile](https://github.com/jx11r/qtile)
-+ **Bar**: Qtile's Bar
-+ **Shell**: [zsh](https://github.com/jx11r/archdots/tree/main/.zsh)
-+ **Terminal**: [Alacritty](/.config/alacritty/alacritty.yml)
-+ **Editor:** [Neovim](https://github.com/jx11r/nvim)
-+ **File Manager**: Thunar
 + **Compositor**: [Picom](/.config/picom/picom.conf)
-+ **Launcher**: [Rofi](https://github.com/jx11r/archdots/tree/main/.config/rofi)
++ **Editor:** [Neovim](https://github.com/jx11r/nvim)
++ **File Manager**: [Thunar](https://gitlab.xfce.org/xfce/thunar)
++ **Launcher**: [Rofi](/.config/rofi)
++ **Notifications**: [Wired](/.config/wired/wired.ron)
++ **Terminal**: [Alacritty](/.config/alacritty/alacritty.yml)
++ **Shell**: [zsh](/.zshrc)
 
 ## Table of Contents
 > - [Archdots](#archdots)
