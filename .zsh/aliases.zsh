@@ -25,6 +25,7 @@ alias cl='clear'
 alias cd..='cd ..'
 alias tar='tar -xf'
 alias grep='grep --color=auto'
+alias -g G='| grep'
 alias -g L='| less'
 
 # Files
