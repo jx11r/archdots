@@ -1,0 +1,7 @@
+# Ignore
+/*
+
+# Files
+!.gitignore
+!ssh-key
+!synctime

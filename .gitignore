@@ -7,10 +7,10 @@
 !.gitconfig
 !.gitignore
 !.gitmodules
-!LICENSE
 !.xinitrc
 !.zprofile
 !.zshrc
+!LICENSE
 
 # Folders
 !.config
