@@ -6,11 +6,11 @@ source /usr/share/gitstatus/gitstatus.plugin.zsh
 # Fix useless space (right prompt)
 # ZLE_RPROMPT_INDENT=0
 
-function preexec() {
+preexec() {
   timer=$(($(date +%s%0N) / 1000000000))
 }
 
-function precmd() {
+precmd() {
   [ $timer ] && {
     local seconds=$(($(date +%s%0N) / 1000000000 - $timer))
     local x=$seconds
@@ -35,7 +35,7 @@ function precmd() {
   }
 }
 
-function gitstatus() {
+gitstatus() {
   if gitstatus_query MY && [[ $VCS_STATUS_RESULT == ok-sync ]]; then
     declare -A VCS_STATUS
       VCS_STATUS[1]=$VCS_STATUS_NUM_UNSTAGED_DELETED
@@ -80,7 +80,7 @@ function gitstatus() {
   fi
 }
 
-function main() {
+main() {
   PROMPT='%B%F{cyan}%1~%f '
   PROMPT+=$(gitstatus)
   PROMPT+="%F{yellow}${elapsed}%f"
