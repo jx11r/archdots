@@ -1,7 +1,8 @@
 # Ignore
 /*
-.local/share
+.local/include
 .local/lib
+.local/share
 
 # Files
 !.gitconfig
