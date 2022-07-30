@@ -1,4 +1,3 @@
-# --==[ Aliases ]==--
 autoload -Uz compinit && compinit
 
 globalias() {

@@ -1,4 +1,3 @@
-# --==[ Prompt + Git ]==--
 autoload -U colors && colors
 autoload -Uz add-zsh-hook
 source /usr/share/gitstatus/gitstatus.plugin.zsh

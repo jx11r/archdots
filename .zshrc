@@ -1,4 +1,3 @@
-# --==[ Zsh Config ]==--
 source ~/.zsh/aliases.zsh
 source ~/.zsh/options.zsh
 source ~/.zsh/prompt.zsh
