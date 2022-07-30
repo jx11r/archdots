@@ -1,7 +1,4 @@
-# --==[ Bat Config ]==--
-
-# bat --help
---theme=gruvbox-dark
+--theme=TwoDark
 --style=plain
 --tabs=2
 --paging=never
