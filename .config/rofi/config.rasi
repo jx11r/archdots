@@ -1,4 +1,18 @@
-/* --==[ Imports ]==-- */
+configuration {
 
-// TO DO: add more themes
-@theme "themes/basic"
+    // Timeout from user input.
+    timeout {
+        // The delay after inactivity to execute action.
+        delay: 0;
+        // The action to execute once the delay expires.
+        action: "kb-cancel";
+    }
+
+    // File browser modi.
+    filebrowser {
+        sorting-method:    "name";
+        directories-first: true;
+    }
+}
+
+@theme "default"
