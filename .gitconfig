@@ -3,3 +3,5 @@
 	email = jx11r@hotmail.com
 [init]
 	defaultBranch = main
+[pull]
+	rabase = true
