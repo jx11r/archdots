@@ -1,5 +1,5 @@
 * {
-  container:  rgba(30, 30, 46, 0.8);  // background
+  container:  rgba(30, 30, 46, 0.85); // background
   selected:   rgba(88, 91, 112, 0.5); // black
   background: #1e1e2e;
   foreground: #cdd6f4;
