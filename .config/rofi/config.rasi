@@ -5,7 +5,6 @@ configuration {
   display-window: "﩯";
   drun-display-format: "{name}";
   font: "CaskaydiaCove Nerd Font 10";
-  fullscreen: true;
   icon-theme: "Papirus";
   show-icons: true;
   sidebar-mode: false;
