@@ -1,15 +1,15 @@
 import:
-  - ~/.config/alacritty/colors/catppuccin.yml
-  # - ~/.config/alacritty/colors/gruvbox_material.yml
-  # - ~/.config/alacritty/colors/material.yml
+  - ~/.config/alacritty/colorscheme/catppuccin.yml
+  # - ~/.config/alacritty/colorscheme/gruvbox_material.yml
+  # - ~/.config/alacritty/colorscheme/material.yml
 
 env:
   TERM: xterm-256color
 
 window:
   padding:
-    x: 12
-    y: 10
+    x: 15
+    y: 15
 
   dynamic_padding: false
   decorations: None
@@ -17,7 +17,7 @@ window:
   dynamic_title: true
 
 scrolling:
-  history: 10000
+  history: 3500
   multiplier: 3
 
 font:
