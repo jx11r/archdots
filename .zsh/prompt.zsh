@@ -80,10 +80,10 @@ gitstatus() {
 }
 
 main() {
-  PROMPT='%B%F{cyan}%1~%f '
+  PROMPT='%F{cyan}%1~%f '
   PROMPT+=$(gitstatus)
   PROMPT+="%F{yellow}${elapsed}%f"
-  PROMPT+='%F{%(?.green.red)}❯ %f%b'
+  PROMPT+='%F{%(?.green.red)}❯ %f'
 
   setopt no_prompt_{bang,subst} prompt_percent
 }
