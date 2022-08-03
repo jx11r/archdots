@@ -21,7 +21,7 @@ window:
   title: Terminal
   dynamic_padding: false
   decorations: None
-  opacity: 1.0
+  opacity: 0.95
   dynamic_title: true
 
 scrolling:
