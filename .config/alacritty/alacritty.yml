@@ -7,10 +7,18 @@ env:
   TERM: xterm-256color
 
 window:
+  dimensions:
+    columns: 63
+    lines: 17
+
   padding:
     x: 15
     y: 15
 
+  class:
+    general: floating
+
+  title: Terminal
   dynamic_padding: false
   decorations: None
   opacity: 1.0
@@ -45,9 +53,6 @@ cursor:
     blinking: Off
 
   unfocused_hollow: true
-
-shell:
-  program: /usr/bin/zsh
 
 mouse:
   hide_when_typing: true
