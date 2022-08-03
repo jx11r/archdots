@@ -3,6 +3,15 @@ local action = wezterm.action
 
 return {
   {
+    key = 'Backspace',
+    mods = 'CTRL',
+    action = action.SendKey {
+      key = 'Backspace',
+      mods = 'ALT',
+    },
+  },
+
+  {
     key = 'c',
     mods = 'CTRL|SHIFT',
     action = action.CopyTo 'ClipboardAndPrimarySelection',
