@@ -7,7 +7,7 @@ return {
   automatically_reload_config = true,
   bold_brightens_ansi_colors = true,
   check_for_updates = false,
-  debug_key_events = true,
+  debug_key_events = false,
   default_cursor_style = 'SteadyBar',
   enable_scroll_bar = false,
   enable_wayland = false,
