@@ -19,13 +19,13 @@
 </a>
 
 + **WM**: [Qtile](https://github.com/jx11r/qtile)
-+ **Compositor**: [Picom](/.config/picom/picom.conf)
-+ **Editor:** [Neovim](https://github.com/jx11r/nvim)
++ **Compositor**: [Picom](https://github.com/yshui/picom)
++ **Editor:** [Neovim](https://github.com/neovim/neovim)
 + **File Manager**: [Thunar](https://gitlab.xfce.org/xfce/thunar)
-+ **Launcher**: [Rofi](/.config/rofi)
-+ **Notifications**: [Wired](/.config/wired/wired.ron)
-+ **Terminal**: [Alacritty](/.config/alacritty/alacritty.yml)
-+ **Shell**: [zsh](/.zshrc)
++ **Launcher**: [Rofi](https://github.com/davatorium/rofi)
++ **Notifications**: [Wired](https://github.com/Toqozz/wired-notify)
++ **Terminal**: [WezTerm](https://github.com/wez/wezterm)
++ **Shell**: [zsh](https://sourceforge.net/p/zsh/code/)
 
 ## Table of Contents
 > - [Archdots](#archdots)
@@ -33,11 +33,10 @@
 >   - [Roadmap](#roadmap)
 
 ## Requirements
-- alacritty
-  - nerd-fonts-cascadia-code (AUR)
 - gnome-keyring
   - libsecret
   - openssh
+- nerd-fonts-cascadia-code (AUR)
 - picom
 - rofi
   - papirus-icon-theme
@@ -45,10 +44,11 @@
   - noto-fonts
   - noto-fonts-cjk (Optional)
 - xorg-xinit
+- wezterm-nightly-bin (AUR)
 - zsh
   - bat
   - exa
-  - gitstatus (AUR)
+  - gitstatus-bin (AUR)
   - zsh-autosuggestions
   - zsh-syntax-highlighting
 
