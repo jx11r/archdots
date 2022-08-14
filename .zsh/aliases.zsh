@@ -22,8 +22,9 @@ alias yay='yay --devel'
 alias dload='curl -O'
 alias cl='clear'
 alias cd..='cd ..'
-alias tar='tar -xf'
 alias grep='grep --color=auto'
+alias mktar='tar cfvz .tar.gz'
+alias untar='tar xvf'
 alias -g G='| grep'
 alias -g L='| less'
 
@@ -60,5 +61,5 @@ alias gpll='git pull'
 alias gpsh='git push'
 
 GLOBALIAS_FILTER_VALUES=(
-  pacman yay dload cl cd.. tar grep ls ll tree cat vi
+  pacman yay dload cl cd.. grep ls ll tree cat vi
 )
