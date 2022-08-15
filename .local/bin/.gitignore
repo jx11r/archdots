@@ -3,5 +3,6 @@
 
 # Files
 !.gitignore
+!chrome.sh
 !ssh-key
 !synctime
