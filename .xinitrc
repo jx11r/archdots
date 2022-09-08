@@ -12,7 +12,7 @@
 eval $(gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
 
-# Keyboard layout
+# Keyboard Layout
 # setxkbmap us -variant altgr-intl &
 setxkbmap latam &
 
@@ -24,6 +24,9 @@ picom &
 
 # Notification Daemon
 wired &
+
+# Apps
+discord --start-minimized &
 
 # Start WM
 exec qtile start
