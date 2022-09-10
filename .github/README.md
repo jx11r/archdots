@@ -44,7 +44,7 @@
   - noto-fonts
   - noto-fonts-cjk (Optional)
 - xorg-xinit
-- wezterm-nightly-bin (AUR)
+- wezterm
 - zsh
   - bat
   - exa
