@@ -40,7 +40,7 @@
 - picom
 - rofi
   - papirus-icon-theme
-- wired (AUR)
+- wired
   - noto-fonts
   - noto-fonts-cjk (Optional)
 - xorg-xinit
