@@ -23,7 +23,6 @@
 + **Editor:** [Neovim](https://github.com/neovim/neovim)
 + **File Manager**: [Thunar](https://gitlab.xfce.org/xfce/thunar)
 + **Launcher**: [Rofi](https://github.com/davatorium/rofi)
-+ **Notifications**: [Wired](https://github.com/Toqozz/wired-notify)
 + **Terminal**: [WezTerm](https://github.com/wez/wezterm)
 + **Shell**: [zsh](https://sourceforge.net/p/zsh/code/)
 
