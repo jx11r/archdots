@@ -3,7 +3,7 @@ autoload -Uz add-zsh-hook
 source /usr/share/gitstatus/gitstatus.plugin.zsh
 
 # Fix useless space (right prompt)
-# ZLE_RPROMPT_INDENT=0
+ZLE_RPROMPT_INDENT=0
 
 preexec() {
   timer=$(($(date +%s%0N) / 1000000000))
@@ -84,6 +84,11 @@ main() {
   PROMPT+=$(gitstatus)
   PROMPT+="%F{yellow}${elapsed}%f"
   PROMPT+='%F{%(?.green.red)}❯ %f'
+
+  RPROMPT=''
+  [[ -n ${VIRTUAL_ENV} ]] && {
+    RPROMPT+="%F{yellow} env%f"
+  }
 
   setopt no_prompt_{bang,subst} prompt_percent
 }
