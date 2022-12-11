@@ -42,30 +42,6 @@ return {
   },
 
   {
-    key = 't',
-    mods = 'CTRL',
-    action = action.SpawnTab 'CurrentPaneDomain',
-  },
-
-  {
-    key = 'w',
-    mods = 'CTRL',
-    action = action.CloseCurrentPane { confirm = false },
-  },
-
-  {
-    key = 'Tab',
-    mods = 'CTRL',
-    action = action { ActivateTabRelative = 1 },
-  },
-
-  {
-    key = 'Tab',
-    mods = 'CTRL|SHIFT',
-    action = action { ActivateTabRelative = -1 },
-  },
-
-  {
     key = 'F',
     mods = 'CTRL|SHIFT',
     action = action.Search { CaseSensitiveString = '' },
