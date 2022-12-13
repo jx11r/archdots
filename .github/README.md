@@ -20,7 +20,7 @@
 
 + **WM**: [Qtile](https://github.com/jx11r/qtile)
 + **Compositor**: [Picom](https://github.com/yshui/picom)
-+ **Editor:** [Neovim](https://github.com/neovim/neovim)
++ **Editor:** [Neovim](https://github.com/jx11r/nvim)
 + **File Manager**: [Thunar](https://gitlab.xfce.org/xfce/thunar)
 + **Launcher**: [Rofi](https://github.com/davatorium/rofi)
 + **Terminal**: [WezTerm](https://github.com/wez/wezterm)
