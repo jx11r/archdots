@@ -32,9 +32,6 @@
 >   - [Roadmap](#roadmap)
 
 ## Requirements
-- gnome-keyring
-  - libsecret
-  - openssh
 - nerd-fonts-cascadia-code (AUR)
 - picom
 - rofi
@@ -43,6 +40,9 @@
   - noto-fonts
   - noto-fonts-cjk (Optional)
 - xorg-xinit
+  - gnome-keyring
+  - libsecret
+  - openssh
 - wezterm
 - zsh
   - bat
