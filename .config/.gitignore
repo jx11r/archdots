@@ -5,7 +5,6 @@
 !.gitignore
 
 # Folders
-!alacritty
 !bat
 !picom
 !rofi

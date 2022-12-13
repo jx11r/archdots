@@ -7,7 +7,6 @@
 
 # Files
 !.gitignore
-!.gitmodules
 !.xinitrc
 !.zprofile
 !.zshrc
