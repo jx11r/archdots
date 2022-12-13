@@ -6,7 +6,6 @@
 .local/state
 
 # Files
-!.gitconfig
 !.gitignore
 !.gitmodules
 !.xinitrc
