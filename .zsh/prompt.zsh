@@ -87,7 +87,7 @@ main() {
 
   RPROMPT=''
   [[ -n ${VIRTUAL_ENV} ]] && {
-    RPROMPT+="%F{yellow} env%f"
+    RPROMPT+="%F{yellow}(env)%f"
   }
 
   setopt no_prompt_{bang,subst} prompt_percent
