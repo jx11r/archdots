@@ -6,8 +6,6 @@ source ~/.zsh/prompt.zsh
 export PATH="${HOME}/.local/bin:${PATH}"
 
 # Autostart
-unset XDG_SEAT
-
 [[ -e ~/.ssh/key ]] && {
   { eval `ssh-agent`; ssh-add -q ~/.ssh/key; } &>/dev/null
 }
