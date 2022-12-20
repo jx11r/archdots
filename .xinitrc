@@ -13,8 +13,7 @@ eval $(gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
 
 # Keyboard Layout
-# setxkbmap us -variant altgr-intl &
-setxkbmap latam &
+setxkbmap us -variant altgr-intl &
 
 # Screensaver
 xset -dpms s off &
