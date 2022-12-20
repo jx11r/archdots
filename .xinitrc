@@ -25,7 +25,7 @@ picom &
 wired &
 
 # Apps
-discord --start-minimized &
+# discord --start-minimized &
 
 # Start WM
 exec qtile start
