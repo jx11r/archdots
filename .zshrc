@@ -4,6 +4,7 @@ source ~/.zsh/prompt.zsh
 
 # Exports
 export PATH="${HOME}/.local/bin:${PATH}"
+export EDITOR=nvim
 
 # Autostart
 [[ -e ~/.ssh/key ]] && {
