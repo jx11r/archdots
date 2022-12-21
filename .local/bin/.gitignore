@@ -3,6 +3,6 @@
 
 # Files
 !.gitignore
-!chrome.sh
+!brave-launcher
 !ssh-key
 !synctime

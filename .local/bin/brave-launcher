@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+BRAVE_USER_FLAGS_FILE="$XDG_CONFIG_HOME/flags.conf"
+
+[[ -f $BRAVE_USER_FLAGS_FILE ]] && {
+  USER_FLAGS="$(cat $BRAVE_USER_FLAGS_FILE | sed 's/#.*//')"
+}
+
+/usr/bin/brave $@ $USER_FLAGS

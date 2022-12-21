@@ -3,6 +3,7 @@
 
 # Files
 !.gitignore
+!flags.conf
 
 # Folders
 !bat
