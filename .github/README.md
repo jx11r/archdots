@@ -36,13 +36,9 @@
 - picom
 - rofi
   - papirus-icon-theme
-- wired
+- wired (AUR)
   - noto-fonts
   - noto-fonts-cjk (Optional)
-- xorg-xinit
-  - gnome-keyring
-  - libsecret
-  - openssh
 - wezterm
 - zsh
   - bat
