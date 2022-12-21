@@ -2,15 +2,15 @@
 
 # Start some nice programs
 [[ -d /etc/X11/xinit/xinitrc.d ]] && {
-  for file in /etc/X11/xinit/xinitrc.d/?*.sh; do
-    [[ -x $file ]] && . $file
+  for f in /etc/X11/xinit/xinitrc.d/?*.sh; do
+    [[ -x $f ]] && . $f
   done
-  unset file
+  unset f
 }
 
 # Gnome Keyring
-eval $(gnome-keyring-daemon --start)
-export SSH_AUTH_SOCK
+# eval $(gnome-keyring-daemon --start)
+# export SSH_AUTH_SOCK
 
 # Keyboard Layout
 setxkbmap us -variant altgr-intl &
