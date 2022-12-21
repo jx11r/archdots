@@ -1,0 +1,57 @@
+# --[ archdots ]--
+bat
+nerd-fonts-cascadia-code
+exa
+gitstatus-bin
+noto-fonts
+papirus-icon-theme
+picom
+rofi
+wezterm
+wired
+xorg-xset
+zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
+
+# --[ qtile ]--
+brightnessctl
+pacman-contrib
+pamixer
+playerctl
+python-psutil
+qtile-extras-git
+qtile-git
+ttf-sourcecodepro-nerd
+
+# --[ neovim ]--
+fd
+neovim
+ripgrep
+xclip
+
+# --[ apps ]--
+evince
+ffmpegthumbnailer
+gnome-screenshot
+gpicview
+libgsf
+lxappearance
+thunar
+thunar-archive-plugin
+thunar-volman
+tumbler
+vlc
+
+# --[ themes ]--
+catppuccin-gtk-theme-mocha
+
+# --[ optional packages ]--
+# brave-bin
+# htop
+# neofetch
+# spotify-launcher
+# xcolor
+
+# visual-studio-code-bin
+# icu69-bin
