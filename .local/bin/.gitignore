@@ -4,5 +4,4 @@
 # Files
 !.gitignore
 !brave-launcher
-!ssh-key
 !synctime
