@@ -1,4 +1,4 @@
---theme=TwoDark
+--theme=catppuccin-mocha
 --style=plain
 --tabs=2
 --paging=never
