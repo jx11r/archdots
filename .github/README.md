@@ -32,7 +32,6 @@
 >   - [Roadmap](#roadmap)
 
 ## Requirements
-- nerd-fonts-cascadia-code (AUR)
 - picom
 - rofi
   - papirus-icon-theme
@@ -40,6 +39,7 @@
   - noto-fonts
   - noto-fonts-cjk (Optional)
 - wezterm
+  - nerd-fonts-cascadia-code (AUR)
 - zsh
   - bat
   - exa
