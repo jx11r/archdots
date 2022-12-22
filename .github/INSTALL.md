@@ -2,10 +2,9 @@
   <h2>Arch Linux Installation</h2>
 </div>
 
-*Just a personal guide, you shouldn't use this,
-the official installation guide is [here](https://wiki.archlinux.org/title/Installation_guide).*
+*Just a personal guide, you shouldn't use this.*
 
-1. Download the latest [Arch Linux ISO](https://archlinux.org/download/).
+1. Download the latest Arch Linux [ISO](https://archlinux.org/download/).
 2. [Connect](https://wiki.archlinux.org/title/Iwd#iwctl) to the internet.
 3. Format and mount disks/partitions:
 ```shell
@@ -28,5 +27,5 @@ mount --mkdir /dev/sda3 /mnt/home
 ```
 4. Finally run this script:
 ```shell
-bash <(curl -s https://raw.githubusercontent.com/jx11r/src/main/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/jx11r/src/!/install.sh)
 ```
