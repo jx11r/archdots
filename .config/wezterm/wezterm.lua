@@ -39,7 +39,7 @@ return {
 
   -- Window
   adjust_window_size_when_changing_font_size = false,
-  window_background_opacity = 0.96,
+  window_background_opacity = 1.0,
   window_close_confirmation = 'NeverPrompt',
   window_decorations = 'NONE',
   window_padding = {
