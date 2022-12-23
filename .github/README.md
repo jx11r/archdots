@@ -37,6 +37,7 @@
   - papirus-icon-theme
 - wired (AUR)
   - noto-fonts
+  - noto-fonts-emoji (Optional)
   - noto-fonts-cjk (Optional)
 - wezterm
   - nerd-fonts-cascadia-code (AUR)
