@@ -37,6 +37,7 @@ gnome-screenshot
 gpicview
 libgsf
 lxappearance
+pavucontrol
 thunar
 thunar-archive-plugin
 thunar-volman
