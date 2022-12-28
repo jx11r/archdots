@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 local keys = require 'keys'
 
 return {
-  -- Global Options
+  -- General Options
   audible_bell = 'Disabled',
   automatically_reload_config = true,
   bold_brightens_ansi_colors = true,
