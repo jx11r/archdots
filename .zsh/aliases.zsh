@@ -20,11 +20,13 @@ alias reflector='sudo reflector --sort rate -l 5 --save /etc/pacman.d/mirrorlist
 alias pacman='sudo pacman'
 alias yay='yay --devel'
 alias dload='curl -O'
+alias ph='patch -p1 <'
 alias cl='clear'
 alias cd..='cd ..'
 alias grep='grep --color=auto'
 alias mktar='tar cfvz .tar.gz'
 alias untar='tar xvf'
+alias -g D='2>/dev/null'
 alias -g G='| grep'
 alias -g L='| less'
 
