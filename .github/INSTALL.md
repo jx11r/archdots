@@ -27,5 +27,5 @@ mount --mkdir /dev/sda3 /mnt/home
 ```
 4. Finally run this script:
 ```shell
-bash <(curl -s https://raw.githubusercontent.com/jx11r/src/!/install.sh)
+bash <(curl -s 'https://raw.githubusercontent.com/jx11r/src/!/install.sh')
 ```
