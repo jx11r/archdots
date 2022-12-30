@@ -4,6 +4,7 @@ nerd-fonts-cascadia-code
 exa
 gitstatus-bin
 noto-fonts
+noto-fonts-emoji
 papirus-icon-theme
 picom
 rofi
@@ -28,6 +29,8 @@ ttf-sourcecodepro-nerd
 fd
 neovim
 ripgrep
+unzip
+wget
 xclip
 
 # --[ apps ]--
@@ -48,11 +51,12 @@ vlc
 catppuccin-gtk-theme-mocha
 
 # --[ optional packages ]--
-# brave-bin
-# htop
-# neofetch
-# spotify-launcher
-# xcolor
-
-# visual-studio-code-bin
-# icu69-bin
+brave-bin
+htop
+icu69-bin
+neofetch
+spotify-launcher
+visual-studio-code-bin
+wgetpaste
+xcolor
+xorg-server-xephyr
