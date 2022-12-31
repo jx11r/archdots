@@ -26,11 +26,6 @@
 + **Terminal**: [WezTerm](https://github.com/wez/wezterm)
 + **Shell**: [zsh](https://sourceforge.net/p/zsh/code/)
 
-## Table of Contents
-> - [Archdots](#archdots)
->   - [Requirements](#requirements)
->   - [Roadmap](#roadmap)
-
 ## Requirements
 - picom
 - rofi
@@ -47,7 +42,3 @@
   - gitstatus-bin (AUR)
   - zsh-autosuggestions
   - zsh-syntax-highlighting
-
-## Roadmap
-- [ ] Add gallery section (screenshots)
-- [ ] Add more configurations
