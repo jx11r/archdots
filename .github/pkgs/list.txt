@@ -28,6 +28,7 @@ ttf-sourcecodepro-nerd
 # --[ neovim ]--
 fd
 neovim
+npm
 ripgrep
 unzip
 wget
