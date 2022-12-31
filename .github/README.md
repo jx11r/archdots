@@ -30,12 +30,12 @@
 - picom
 - rofi
   - papirus-icon-theme
+- wezterm
+  - nerd-fonts-cascadia-code (AUR)
 - wired (AUR)
   - noto-fonts
   - noto-fonts-emoji (Optional)
   - noto-fonts-cjk (Optional)
-- wezterm
-  - nerd-fonts-cascadia-code (AUR)
 - zsh
   - bat
   - exa
