@@ -66,19 +66,7 @@ return {
   },
 
   {
-    key = 'H',
-    mods = 'CTRL|SHIFT|ALT',
-    action = action.AdjustPaneSize { 'Left', 5 },
-  },
-
-  {
     key = 'RightArrow',
-    mods = 'CTRL|SHIFT|ALT',
-    action = action.AdjustPaneSize { 'Right', 5 },
-  },
-
-  {
-    key = 'L',
     mods = 'CTRL|SHIFT|ALT',
     action = action.AdjustPaneSize { 'Right', 5 },
   },
@@ -90,19 +78,7 @@ return {
   },
 
   {
-    key = 'K',
-    mods = 'CTRL|SHIFT|ALT',
-    action = action.AdjustPaneSize { 'Up', 5 },
-  },
-
-  {
     key = 'DownArrow',
-    mods = 'CTRL|SHIFT|ALT',
-    action = action.AdjustPaneSize { 'Down', 5 },
-  },
-
-  {
-    key = 'J',
     mods = 'CTRL|SHIFT|ALT',
     action = action.AdjustPaneSize { 'Down', 5 },
   },
@@ -114,19 +90,7 @@ return {
   },
 
   {
-    key = 'H',
-    mods = 'CTRL|SHIFT',
-    action = action.ActivatePaneDirection 'Left',
-  },
-
-  {
     key = 'RightArrow',
-    mods = 'CTRL|SHIFT',
-    action = action.ActivatePaneDirection 'Right',
-  },
-
-  {
-    key = 'L',
     mods = 'CTRL|SHIFT',
     action = action.ActivatePaneDirection 'Right',
   },
@@ -138,19 +102,7 @@ return {
   },
 
   {
-    key = 'K',
-    mods = 'CTRL|SHIFT',
-    action = action.ActivatePaneDirection 'Up',
-  },
-
-  {
     key = 'DownArrow',
-    mods = 'CTRL|SHIFT',
-    action = action.ActivatePaneDirection 'Down',
-  },
-
-  {
-    key = 'J',
     mods = 'CTRL|SHIFT',
     action = action.ActivatePaneDirection 'Down',
   },
