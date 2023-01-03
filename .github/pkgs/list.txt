@@ -29,6 +29,8 @@ ttf-sourcecodepro-nerd
 fd
 neovim
 npm
+python-pip
+python-virtualenv
 ripgrep
 unzip
 wget
