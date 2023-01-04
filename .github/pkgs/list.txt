@@ -27,13 +27,11 @@ ttf-sourcecodepro-nerd
 
 # --[ neovim ]--
 fd
-neovide
 neovim
 npm
 python-pip
 python-virtualenv
 ripgrep
-ttf-firacode-nerd
 unzip
 wget
 xclip
