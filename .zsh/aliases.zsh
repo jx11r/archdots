@@ -36,6 +36,7 @@ alias ll='exa -la --group-directories-first'
 alias tree='exa -T'
 alias cat='bat'
 alias vi='nvim'
+alias nv='neovide'
 
 # Xephyr
 alias Xone='Xephyr -screen 720x480 :1'
@@ -63,5 +64,5 @@ alias gpll='git pull'
 alias gpsh='git push'
 
 GLOBALIAS_FILTER_VALUES=(
-  pacman yay dload cl cd.. grep ls ll tree cat vi
+  pacman yay dload cl cd.. grep ls ll tree cat vi nv
 )
