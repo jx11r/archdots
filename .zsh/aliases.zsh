@@ -36,7 +36,6 @@ alias ll='exa -la --group-directories-first'
 alias tree='exa -T'
 alias cat='bat'
 alias vi='nvim'
-alias nv='neovide'
 
 # Xephyr
 alias Xone='Xephyr -screen 720x480 :1'
