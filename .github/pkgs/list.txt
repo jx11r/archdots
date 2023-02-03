@@ -1,13 +1,14 @@
 # --[ archdots ]--
 bat
-nerd-fonts-cascadia-code
 exa
 gitstatus-bin
 noto-fonts
 noto-fonts-emoji
+otf-cascadia-code-nerd
 papirus-icon-theme
 picom
 rofi
+ttf-nerd-fonts-symbols-2048-em
 wezterm
 wired
 xorg-xset
@@ -20,6 +21,7 @@ brightnessctl
 pacman-contrib
 pamixer
 playerctl
+python-dbus-next
 python-psutil
 qtile-extras-git
 qtile-git

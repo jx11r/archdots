@@ -31,7 +31,8 @@
 - rofi
   - papirus-icon-theme
 - wezterm
-  - nerd-fonts-cascadia-code (AUR)
+  - otf-cascadia-code-nerd
+  - ttf-nerd-fonts-symbols-2048-em
 - wired (AUR)
   - noto-fonts
   - noto-fonts-emoji (Optional)
