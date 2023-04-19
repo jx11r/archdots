@@ -15,7 +15,7 @@ zle -N globalias
 bindkey " " globalias
 bindkey -M isearch " " magic-space
 
-# System
+# system
 alias reflector='sudo reflector --sort rate -l 5 --save /etc/pacman.d/mirrorlist'
 alias pacman='sudo pacman'
 alias yay='yay --devel'
@@ -30,18 +30,18 @@ alias -g D='2>/dev/null'
 alias -g G='| grep'
 alias -g L='| less'
 
-# Files
+# files
 alias ls='exa --group-directories-first'
 alias ll='exa -la --group-directories-first'
 alias tree='exa -T'
 alias cat='bat'
 alias vi='nvim'
 
-# Xephyr
+# xephyr
 alias Xone='Xephyr -screen 720x480 :1'
 alias Xtwo='Xephyr -screen 640x480 -screen 640x480 +xinerama :1'
 
-# Git
+# git
 alias ga='git add'
 alias gb='git branch'
 alias gc='git clone'
@@ -61,6 +61,9 @@ alias gcm='git commit -m'
 alias gcma='git commit -a -m'
 alias gpll='git pull'
 alias gpsh='git push'
+
+# apps
+alias vs='code --profile'
 
 GLOBALIAS_FILTER_VALUES=(
   pacman yay dload cl cd.. grep ls ll tree cat vi nv
