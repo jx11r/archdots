@@ -31,14 +31,14 @@
 - rofi
   - papirus-icon-theme
 - wezterm
-  - otf-cascadia-code-nerd
-  - ttf-nerd-fonts-symbols-2048-em
-  - ttf-nerd-fonts-symbols-2048-em-mono
+  - ttf-cascadia-code-nerd
+  - ttf-nerd-fonts-symbols
   - ttf-nerd-fonts-symbols-common
+  - ttf-nerd-fonts-symbols-mono
 - wired (AUR)
   - noto-fonts
-  - noto-fonts-emoji (Optional)
-  - noto-fonts-cjk (Optional)
+  - noto-fonts-emoji (optional)
+  - noto-fonts-cjk (optional)
 - zsh
   - bat
   - exa
