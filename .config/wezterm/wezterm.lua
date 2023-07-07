@@ -20,7 +20,7 @@ return {
   color_scheme = 'Catppuccin Mocha',
 
   -- Font
-  font_size = 10.0,
+  font_size = 11,
   font = wezterm.font {
     family = 'CaskaydiaCove Nerd Font',
     stretch = 'Normal',
