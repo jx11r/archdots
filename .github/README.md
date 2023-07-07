@@ -33,8 +33,6 @@
 - wezterm
   - ttf-cascadia-code-nerd
   - ttf-nerd-fonts-symbols
-  - ttf-nerd-fonts-symbols-common
-  - ttf-nerd-fonts-symbols-mono
 - wired (AUR)
   - noto-fonts
   - noto-fonts-emoji (optional)
