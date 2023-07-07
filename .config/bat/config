@@ -1,4 +1,4 @@
---theme=catppuccin-mocha
+--theme=catppuccin
 --style=plain
 --tabs=2
 --paging=never
