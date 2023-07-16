@@ -37,9 +37,11 @@ alias tree='exa -T'
 alias cat='bat'
 alias vi='nvim'
 
-# xephyr
-alias Xone='Xephyr -screen 720x480 :1'
-alias Xtwo='Xephyr -screen 640x480 -screen 640x480 +xinerama :1'
+# dev
+alias Xp='Xephyr -screen 1920x1080 :1 &'
+alias Xp1='Xephyr -screen 912x598 :1 &'
+alias Xp2='Xephyr -screen 912x498 -screen 912x498 +xinerama :1 &'
+alias DS='DISPLAY=:1.0 QTILE_XEPHYR=1 qtile start -l INFO'
 
 # git
 alias ga='git add'
