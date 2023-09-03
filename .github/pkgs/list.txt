@@ -64,6 +64,7 @@ numlockx
 obs-studio
 onedrive-abraunegg
 pavucontrol
+seahorse
 telegram-desktop
 thunar
 thunar-archive-plugin
