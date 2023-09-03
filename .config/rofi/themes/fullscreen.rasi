@@ -4,7 +4,7 @@
   highlight:   #f38ba8;
   inputbar:    rgba(69, 71, 90, 0.40);
   placeholder: #bac2de;
-  selected:    rgba(88, 91, 112, 0.25);
+  selected:    rgba(69, 71, 90, 0.25);
 }
 
 window {
@@ -27,7 +27,7 @@ inputbar {
   border-color: @foreground;
   border-radius: 18px;
   margin: 5% 25% 5% 25%;
-  padding: 8px;
+  padding: 10px;
 }
 
 prompt {
@@ -70,15 +70,24 @@ element.selected {
 
 element-icon {
   background-color: transparent;
-  size: 50px;
+  size: 55px;
 }
 
 element-text {
   background-color: transparent;
   font: "Cantarell 9";
-  highlight: @red;
+  highlight: @highlight;
   horizontal-align: 0.5;
   margin: 0.5% 1% 0% 1%;
   text-color: @foreground;
   vertical-align: 0.5;
+}
+
+error-message {
+  background-color: transparent;
+}
+
+textbox {
+  background-color: transparent;
+  text-color: @foreground;
 }

@@ -1,18 +1,15 @@
-# Ignore
 /*
 .local/include
 .local/lib
 .local/share
 .local/state
 
-# Files
 !.gitignore
 !.xinitrc
 !.zprofile
 !.zshrc
 !LICENSE
 
-# Folders
 !.config
 !.github
 !.local

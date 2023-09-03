@@ -2,7 +2,6 @@ local wezterm = require 'wezterm'
 local keys = require 'keys'
 
 return {
-  -- General Options
   audible_bell = 'Disabled',
   automatically_reload_config = true,
   bold_brightens_ansi_colors = true,
@@ -16,10 +15,10 @@ return {
   scrollback_lines = 3500,
   show_update_window = false,
 
-  -- Color Scheme
+  -- colorschemes
   color_scheme = 'Catppuccin Mocha',
 
-  -- Font
+  -- font
   font_size = 11,
   font = wezterm.font {
     family = 'CaskaydiaCove Nerd Font',
@@ -27,25 +26,25 @@ return {
     weight = 'Regular',
   },
 
-  -- Key Bindings
+  -- key bindings
   disable_default_key_bindings = true,
   keys = keys,
 
-  -- Tab Bar
+  -- tab bar
   enable_tab_bar = false,
   hide_tab_bar_if_only_one_tab = true,
   show_tab_index_in_tab_bar = false,
   tab_bar_at_bottom = true,
 
-  -- Window
+  -- window
   adjust_window_size_when_changing_font_size = false,
-  window_background_opacity = 1.0,
+  window_background_opacity = 0.9,
   window_close_confirmation = 'NeverPrompt',
   window_decorations = 'NONE',
   window_padding = {
-    top = 15,
-    right = 15,
-    bottom = 15,
-    left = 15,
+    top = 25,
+    right = 25,
+    bottom = 25,
+    left = 25,
   },
 }

@@ -34,8 +34,8 @@
         image_type: Hint,
         padding: Padding(left: 10.0, right: 0.0, top: 10.0, bottom: 10.0),
         rounding: 5.0,
-        scale_width: 70,
-        scale_height: 70,
+        scale_width: 65,
+        scale_height: 65,
       )),
     ),
 

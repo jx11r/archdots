@@ -1,9 +1,10 @@
-# --[ archdots ]--
+# [ archdots ]
 bat
 exa
 gitstatus-bin
 noto-fonts
 noto-fonts-emoji
+noto-fonts-cjk
 papirus-icon-theme
 picom
 rofi
@@ -13,57 +14,71 @@ ttf-nerd-fonts-symbols-common
 ttf-nerd-fonts-symbols-mono
 wezterm
 wired
-xorg-xset
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
 
-# --[ qtile ]--
+# [ qtile ]
 brightnessctl
+otf-hasklig-nerd
 pacman-contrib
 pamixer
 playerctl
 python-dbus-next
+python-pip
 python-psutil
+python-virtualenv
 qtile-extras-git
 qtile-git
-ttf-sourcecodepro-nerd
 
-# --[ neovim ]--
+# [ neovim ]
 fd
 neovim
-npm
-python-pip
-python-virtualenv
 ripgrep
 unzip
 wget
 xclip
 
-# --[ apps ]--
+# [ miscellaneous ]
+adobe-source-sans-fonts
+brave-bin
+btop
+discord
 evince
+ffmpeg
 ffmpegthumbnailer
+gimp
+github-cli
 gnome-screenshot
+gparted
 gpicview
+icu69-bin
+imagemagick
+keepassxc
 libgsf
+libnotify
 lxappearance
+neofetch
+network-manager-applet
+numlockx
+obs-studio
+onedrive-abraunegg
 pavucontrol
+telegram-desktop
 thunar
 thunar-archive-plugin
+thunar-media-tags-plugin
 thunar-volman
 tumbler
-vlc
-
-# --[ themes ]--
-catppuccin-gtk-theme-mocha
-
-# --[ optional packages ]--
-brave-bin
-htop
-icu69-bin
-neofetch
-spotify-launcher
+unrar
 visual-studio-code-bin
+vlc
 wgetpaste
 xcolor
+xdg-desktop-portal-gtk
 xorg-server-xephyr
+xorg-xset
+zip
+
+# [ themes ]
+catppuccin-gtk-theme-mocha

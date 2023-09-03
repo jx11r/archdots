@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Start some nice programs
+# start some nice programs
 [[ -d /etc/X11/xinit/xinitrc.d ]] && {
   for f in /etc/X11/xinit/xinitrc.d/?*.sh; do
     [[ -x $f ]] && . $f
@@ -8,24 +8,20 @@
   unset f
 }
 
-# Gnome Keyring
-# eval $(gnome-keyring-daemon --start)
-# export SSH_AUTH_SOCK
-
-# Keyboard Layout
+# keyboard layout
 setxkbmap us -variant altgr-intl &
 
-# Screensaver
+# screensaver
 xset -dpms s off &
 
-# Compositor
+# compositor
 picom &
 
-# Notification Daemon
+# notification daemon
 wired &
 
-# Apps
-# discord --start-minimized &
+# ensure numlock is active
+numlockx on &
 
-# Start WM
+# start wm
 exec qtile start
