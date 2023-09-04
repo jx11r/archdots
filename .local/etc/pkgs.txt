@@ -16,6 +16,7 @@ wezterm
 wired
 zsh
 zsh-autosuggestions
+zsh-completions
 zsh-syntax-highlighting
 
 # [ qtile ]
@@ -48,22 +49,25 @@ evince
 ffmpeg
 ffmpegthumbnailer
 gimp
-github-cli
 gnome-screenshot
 gparted
 gpicview
+htop
 icu69-bin
 imagemagick
 keepassxc
+less
 libgsf
 libnotify
-lxappearance
+lxappearance-gkt3
 neofetch
 network-manager-applet
 numlockx
 obs-studio
 onedrive-abraunegg
 pavucontrol
+polkit-gnome
+ranger
 seahorse
 telegram-desktop
 thunar
@@ -72,6 +76,7 @@ thunar-media-tags-plugin
 thunar-volman
 tumbler
 unrar
+upower
 visual-studio-code-bin
 vlc
 wgetpaste
@@ -81,5 +86,12 @@ xorg-server-xephyr
 xorg-xset
 zip
 
-# [ themes ]
+# [ gkt / qt ]
 catppuccin-gtk-theme-mocha
+gnome-themes-extra
+gtk-engine-murrine
+kvantum
+kvantum-theme-materia
+qt5ct
+papirus-folders-catppuccin-git
+xcursor-simp1e

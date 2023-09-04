@@ -1,13 +1,14 @@
-# Ignore
 /*
 
-# Files
 !.gitignore
-!flags.conf
+!chromium-flags.conf
 
-# Folders
 !bat
+!btop
+!gtk-3.0
+!kvantum
 !picom
+!qt5ct
 !rofi
 !wezterm
 !wired
