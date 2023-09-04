@@ -8,20 +8,26 @@
   unset f
 }
 
-# keyboard layout
-setxkbmap us -variant altgr-intl &
+# authentication agent
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # screensaver
 xset -dpms s off &
 
-# compositor
+# keyboard layout
+setxkbmap us -variant altgr-intl &
+
+# ensure numlock is active
+numlockx on &
+
+# system tray applet
+nm-applet &
+
+# X compositor
 picom &
 
 # notification daemon
 wired &
-
-# ensure numlock is active
-numlockx on &
 
 # start wm
 exec qtile start
