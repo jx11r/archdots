@@ -1,10 +1,10 @@
 * {
-  background:  rgba(0, 0, 0, 0.45);
+  background:  rgba(0, 0, 0, 0.60);
   foreground:  #cdd6f4;
   highlight:   #f38ba8;
   inputbar:    rgba(69, 71, 90, 0.40);
   placeholder: #bac2de;
-  selected:    rgba(69, 71, 90, 0.25);
+  selected:    rgba(69, 71, 90, 0.30);
 }
 
 window {
