@@ -1,9 +1,6 @@
 /*
-.local/include
-.local/lib
-.local/share
-.local/state
 
+!.gitconfig
 !.gitignore
 !.xinitrc
 !.zprofile
@@ -12,5 +9,7 @@
 
 !.config
 !.github
+!.gnupg
 !.local
+!.ssh
 !.zsh

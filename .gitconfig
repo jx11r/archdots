@@ -1,0 +1,16 @@
+[user]
+  name = jx11r
+  email = jx11r@hotmail.com
+  signingkey = F426C30C08590756
+
+[commit]
+  gpgsign = true
+
+[tag]
+  gpgsign = true
+
+[init]
+  defaultBranch = main
+
+[pull]
+  rebase = true
