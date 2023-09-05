@@ -1,7 +1,6 @@
 # [ archdots ]
 bat
 exa
-gitstatus-bin
 noto-fonts
 noto-fonts-emoji
 noto-fonts-cjk
@@ -69,11 +68,13 @@ pavucontrol
 polkit-gnome
 ranger
 seahorse
+starship
 telegram-desktop
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
+time
 tumbler
 unrar
 upower

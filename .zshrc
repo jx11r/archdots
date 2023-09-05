@@ -1,14 +1,14 @@
-source ~/.zsh/aliases.zsh
-source ~/.zsh/options.zsh
-source ~/.zsh/prompt.zsh
+_modules=(
+  'aliases'
+  'options'
+  'globalias'
+  'syntax-highlighting'
+  'keybinds'
+)
 
-# Exports
-export PATH="${HOME}/.local/bin:${PATH}"
-export PATH="${HOME}/.cargo/bin:${PATH}"
-# export PATH="${HOME}/.local/share/nvim/mason/bin:${PATH}"
-export EDITOR=nvim
+for module in "${_modules[@]}"; do
+  source "$XDG_CONFIG_HOME/zsh/$module.zsh"
+done
 
-# Autostart
-[[ -e ~/.ssh/key ]] && {
-  { eval `ssh-agent`; ssh-add -q ~/.ssh/key; } &>/dev/null
-}
+unset _modules
+eval "$(starship init zsh)"
