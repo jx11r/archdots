@@ -1,10 +1,9 @@
 /*
 
 !.gitignore
-!chromium-flags.conf
-
 !bat
 !btop
+!chromium
 !gtk-3.0
 !kvantum
 !picom
