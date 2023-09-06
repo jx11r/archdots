@@ -20,8 +20,8 @@ $jobs\
 """
 
 [character]
-error_symbol = "[❯](bold maroon)"
-success_symbol = "[❯](bold teal)"
+error_symbol = "[❯](bold red)"
+success_symbol = "[❯](bold pink)"
 
 [cmd_duration]
 format = '[󰞌 $duration]($style) '
@@ -36,10 +36,10 @@ truncate_to_repo = true
 symbol = " "
 
 [git_branch]
-format = '[$symbol$branch(:$remote_branch)]($style) '
+format = '[$symbol$branch(:$remote_branch)](bold flamingo) '
 
 [git_status]
-format = '([\[$all_status$ahead_behind\]]($style) )'
+format = '([\[$all_status$ahead_behind\]](bold maroon) )'
 ahead = ""
 behind = ""
 deleted = "-"
