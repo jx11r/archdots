@@ -28,7 +28,7 @@ format = '[󰞌 $duration]($style) '
 min_time = 15000
 
 [directory]
-format = '[ $path](bold lavender) '
+format = '[$path](bold lavender) '
 truncation_length = 2
 truncate_to_repo = true
 
