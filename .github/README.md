@@ -15,7 +15,7 @@
 </div><br>
 
 <a href="https://archlinux.org">
-  <img align="right" height="150" alt="Arch" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/archlinux_logo_icon_167835.png" />
+  <img align="right" height="130" alt="Arch" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/archlinux_logo_icon_167835.png" />
 </a>
 
 + **WM**: [Qtile](https://github.com/jx11r/qtile)
