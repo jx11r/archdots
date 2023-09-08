@@ -15,7 +15,7 @@
 </div><br>
 
 <a href="https://archlinux.org">
-  <img align="right" height="125" alt="Arch" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/archlinux_logo_icon_167835.png" />
+  <img align="right" height="150" alt="Arch" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/archlinux_logo_icon_167835.png" />
 </a>
 
 + **WM**: [Qtile](https://github.com/jx11r/qtile)
@@ -25,21 +25,3 @@
 + **Launcher**: [Rofi](https://github.com/davatorium/rofi)
 + **Terminal**: [WezTerm](https://github.com/wez/wezterm)
 + **Shell**: [zsh](https://sourceforge.net/p/zsh/code/)
-
-## Requirements
-- picom
-- rofi
-  - papirus-icon-theme
-- wezterm
-  - ttf-cascadia-code-nerd
-  - ttf-nerd-fonts-symbols
-- wired (AUR)
-  - noto-fonts
-  - noto-fonts-emoji (optional)
-  - noto-fonts-cjk (optional)
-- zsh
-  - bat
-  - exa
-  - gitstatus-bin (AUR)
-  - zsh-autosuggestions
-  - zsh-syntax-highlighting
