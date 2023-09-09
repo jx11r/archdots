@@ -2,6 +2,7 @@
 
 !.gitconfig
 !.gitignore
+!.lesskey
 !.xinitrc
 !.zprofile
 !.zshrc
