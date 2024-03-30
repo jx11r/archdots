@@ -29,8 +29,8 @@ python-dbus-next
 python-pip
 python-psutil
 python-virtualenv
-qtile-extras-git
-qtile-git
+qtile-extras
+qtile
 
 # [ neovim ]
 fd
