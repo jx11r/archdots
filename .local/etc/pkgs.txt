@@ -20,6 +20,7 @@ zsh-syntax-highlighting
 
 # [ qtile ]
 brightnessctl
+mypy
 otf-hasklig-nerd
 pacman-contrib
 pamixer
