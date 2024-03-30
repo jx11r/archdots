@@ -1,6 +1,6 @@
 alias reflector="sudo reflector --sort rate -l 5 --save /etc/pacman.d/mirrorlist"
 alias pacman="sudo pacman"
-alias yay="yay --devel --nodiffmenu --noeditmenu --removemake"
+alias yay="yay --devel --diffmenu=false --editmenu=false --removemake"
 alias dload="curl -O"
 alias ph="patch -p1 <"
 alias c="clear"
