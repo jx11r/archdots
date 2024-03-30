@@ -21,7 +21,7 @@ return {
   -- font
   font_size = 11,
   font = wezterm.font {
-    family = 'CaskaydiaCove Nerd Font',
+    family = 'CaskaydiaCove NF',
     stretch = 'Normal',
     weight = 'Regular',
   },
