@@ -1,4 +1,4 @@
-alias reflector="sudo reflector --sort rate -l 5 --save /etc/pacman.d/mirrorlist"
+alias rft="sudo reflector -l 300 --threads 300 --sort rate -p https --save /etc/pacman.d/mirrorlist -f 3"
 alias pacman="sudo pacman"
 alias yay="yay --devel --diffmenu=false --editmenu=false --removemake"
 alias dload="curl -O"
