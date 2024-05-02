@@ -36,6 +36,13 @@ return {
   },
 
   {
+    key = '=',
+    mods = 'CTRL',
+    action = action.IncreaseFontSize,
+  },
+
+
+  {
     key = '0',
     mods = 'CTRL',
     action = action.ResetFontSize,
