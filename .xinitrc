@@ -15,7 +15,7 @@
 xset -dpms s off &
 
 # keyboard layout
-setxkbmap us -variant colemak
+setxkbmap us -variant altgr-intl &
 
 # ensure numlock is active
 numlockx on &
