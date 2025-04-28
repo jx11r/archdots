@@ -11,13 +11,14 @@ export NO_AT_BRIDGE=1
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 # start the ssh-agent in the background
-eval `ssh-agent` &>/dev/null
+eval $(ssh-agent) &>/dev/null
 
-[[ -e ~/.ssh/github ]] && {
-  { ssh-add -q ~/.ssh/github } &>/dev/null
-}
+# Añadir la clave SSH si existe
+if [[ -e ~/.ssh/github ]]; then
+  ssh-add -q ~/.ssh/github &>/dev/null
+fi
 
 # autostart X at login
-[[ -z $DISPLAY ]] && [[ $XDG_VTNR -eq 1 ]] && {
+if [[ -z $DISPLAY ]] && [[ $(tty) == /dev/tty1 ]]; then
   exec startx
-}
+fi
