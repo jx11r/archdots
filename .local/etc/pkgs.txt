@@ -25,12 +25,12 @@ otf-hasklig-nerd
 pacman-contrib
 pamixer
 playerctl
-python-dbus-next
+python-dbus-fast
 python-pip
 python-psutil
 python-virtualenv
-qtile-extras
 qtile
+qtile-extras
 
 # [ neovim ]
 fd
