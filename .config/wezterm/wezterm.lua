@@ -16,7 +16,7 @@ return {
   show_update_window = false,
 
   -- colorschemes
-  color_scheme = 'Catppuccin Mocha',
+  color_scheme = 'Gruvbox Material (Gogh)',
 
   -- font
   font_size = 11,

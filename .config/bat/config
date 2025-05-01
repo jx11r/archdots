@@ -1,4 +1,4 @@
---theme=catppuccin
+--theme=gruvbox-material-dark
 --style=plain
 --tabs=2
 --paging=never
