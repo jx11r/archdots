@@ -1,4 +1,5 @@
 # system
+gnome-keyring
 libnotify
 man-db
 man-pages
@@ -6,7 +7,6 @@ picom
 pipewire-alsa
 pipewire-pulse
 polkit-gnome
-reflector
 rtkit
 xdg-desktop-portal-gtk
 xdg-utils
@@ -31,6 +31,7 @@ qtile-extras (aur)
 bat
 btop
 eza
+nano
 neovim
 starship
 wezterm

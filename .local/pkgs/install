@@ -12,26 +12,29 @@ invalid_packages=()
 
 echo -e "${sep} Validating packages..."
 for pkg in "${packages[@]}"; do
-    if pacman -Si "$pkg" &>/dev/null || yay -Si "$pkg" &>/dev/null; then
-        valid_packages+=("$pkg")
-    else
-        invalid_packages+=("$pkg")
-    fi
+  if pacman -Si "$pkg" &>/dev/null || yay -Si "$pkg" &>/dev/null; then
+    valid_packages+=("$pkg")
+  else
+    invalid_packages+=("$pkg")
+  fi
 done
 
 echo " package validation complete"
 if [ ${#invalid_packages[@]} -gt 0 ]; then
-    echo -e "${line} the following packages are invalid and will not be installed:"
-    printf '  - %s\n' "${invalid_packages[@]}"
-    echo
+  echo -e "${line} the following packages are invalid and will not be installed:"
+  printf '  - %s\n' "${invalid_packages[@]}"
+  echo
 fi
 
 echo -en "${sep} Proceed with installation? [y/n]: "
 read confirm
 if [[ "$confirm" =~ ^[Yy]$ ]]; then
-    flags='--removemake --noconfirm'
-    yay -S "${valid_packages[@]}" $flags
+  flags='--removemake --noconfirm'
+  yay -S "${valid_packages[@]}" $flags
+  echo -e "${sep} Running post-install setup..."
+  touch /tmp/.pkgs_installed
+  sudo ./setup.sh
 else
-    echo -e "${line} installation cancelled"
-    exit 0
+  echo -e "${line} installation cancelled"
+  exit 0
 fi
