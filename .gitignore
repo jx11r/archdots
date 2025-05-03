@@ -2,14 +2,11 @@
 
 !.gitconfig
 !.gitignore
-!.lesskey
 !.xinitrc
 !.zprofile
 !.zshrc
-!LICENSE
 
 !.config
-!.github
 !.gnupg
 !.local
 !.ssh
