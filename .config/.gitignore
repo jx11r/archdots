@@ -5,9 +5,7 @@ btop/btop.log
 !.gitignore
 !bat
 !btop
-!chromium
 !gtk-3.0
-!kvantum
 !neofetch
 !picom
 !qt5ct
