@@ -7,6 +7,7 @@ picom
 pipewire-alsa
 pipewire-pulse
 polkit-gnome
+reflector
 rtkit
 xdg-desktop-portal-gtk
 xdg-utils
@@ -33,6 +34,7 @@ btop
 eza
 nano
 neovim
+rsync
 starship
 wezterm
 wgetpaste
