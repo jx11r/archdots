@@ -1,33 +1,17 @@
 #!/usr/bin/env bash
 
-# start some nice programs
-[[ -d /etc/X11/xinit/xinitrc.d ]] && {
+if [[ -d /etc/X11/xinit/xinitrc.d ]]; then
   for f in /etc/X11/xinit/xinitrc.d/?*.sh; do
     [[ -x $f ]] && . $f
   done
   unset f
-}
+fi
 
-# authentication agent
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+~/.local/bin/clipboard.sh &
 
-# screensaver
-xset -dpms s off &
-
-# keyboard layout
 setxkbmap us -variant altgr-intl &
-
-# ensure numlock is active
-numlockx on &
-
-# system tray applet
-nm-applet &
-
-# X compositor
 picom &
-
-# notification daemon
 wired &
 
-# start wm
 exec qtile start

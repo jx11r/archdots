@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+reset="\033[0m"
+cyan="\033[1;36m"
+red="\033[1;31m"
+sep="${cyan}::${reset}"
+line="${red} ->${reset}"
+
+mapfile -t packages < <(grep -v '^\s*#' list.txt | sed -E 's/\s*\(aur\)//' | sed '/^\s*$/d')
+valid_packages=()
+invalid_packages=()
+
+echo -e "${sep} Validating packages..."
+for pkg in "${packages[@]}"; do
+    if pacman -Si "$pkg" &>/dev/null || yay -Si "$pkg" &>/dev/null; then
+        valid_packages+=("$pkg")
+    else
+        invalid_packages+=("$pkg")
+    fi
+done
+
+echo " package validation complete"
+if [ ${#invalid_packages[@]} -gt 0 ]; then
+    echo -e "${line} the following packages are invalid and will not be installed:"
+    printf '  - %s\n' "${invalid_packages[@]}"
+    echo
+fi
+
+echo -en "${sep} Proceed with installation? [y/n]: "
+read confirm
+if [[ "$confirm" =~ ^[Yy]$ ]]; then
+    flags='--removemake --noconfirm'
+    yay -S "${valid_packages[@]}" $flags
+else
+    echo -e "${line} installation cancelled"
+    exit 0
+fi

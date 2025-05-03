@@ -1,0 +1,84 @@
+# system
+libnotify
+man-db
+man-pages
+picom
+pipewire-alsa
+pipewire-pulse
+polkit-gnome
+reflector
+rtkit
+xdg-desktop-portal-gtk
+xdg-utils
+xorg-server
+xorg-server-xephyr
+xorg-xinit
+
+# window manager
+brightnessctl
+mypy
+pacman-contrib
+pamixer
+playerctl
+python-dbus-fast
+python-pip
+python-psutil
+python-virtualenv
+qtile
+qtile-extras (aur)
+
+# terminal tools
+bat
+btop
+eza
+neovim
+starship
+wezterm
+wgetpaste
+xclip
+xcolor
+zsh
+zsh-autosuggestions
+zsh-completions
+zsh-syntax-highlighting
+
+# file management
+atool
+ffmpegthumbnailer
+gvfs
+imagemagick
+libgsf
+thunar
+thunar-volman
+tumbler
+unrar
+unzip
+zip
+
+# fonts
+adobe-source-sans-fonts
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+otf-hasklig-nerd
+ttf-cascadia-code-nerd
+ttf-nerd-fonts-symbols
+ttf-nerd-fonts-symbols-common
+ttf-nerd-fonts-symbols-mono
+
+# desktop apps
+brave-bin (aur)
+evince
+flameshot
+gpicview
+mpv
+rofi
+visual-studio-code-bin (aur)
+wired (aur)
+
+# theming
+gnome-themes-extra
+lxappearance
+papirus-icon-theme
+qt5ct
+xcursor-simp1e (aur)
