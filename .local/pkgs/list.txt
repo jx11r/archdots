@@ -81,7 +81,7 @@ wired (aur)
 
 # theming
 gnome-themes-extra
-lxappearance
+lxappearance-gtk3
 papirus-icon-theme
 qt5ct
 xcursor-simp1e (aur)

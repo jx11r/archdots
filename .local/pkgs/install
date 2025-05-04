@@ -29,11 +29,13 @@ fi
 echo -en "${sep} Proceed with installation? [y/n]: "
 read confirm
 if [[ "$confirm" =~ ^[Yy]$ ]]; then
+  chmod 700 ~/.gnupg
   flags='--removemake --noconfirm'
   yay -S "${valid_packages[@]}" $flags
+
   echo -e "${sep} Running post-install setup..."
   touch /tmp/.pkgs_installed
-  sudo ./setup.sh
+  ./setup.sh
 else
   echo -e "${line} installation cancelled"
   exit 0
