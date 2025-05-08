@@ -3,6 +3,7 @@ gnome-keyring
 libnotify
 man-db
 man-pages
+ntp
 picom
 pipewire-alsa
 pipewire-pulse
