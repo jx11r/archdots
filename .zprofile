@@ -10,11 +10,11 @@ export NO_AT_BRIDGE=1
 export GTK_A11Y=none
 export QT_QPA_PLATFORMTHEME=qt5ct
 
-# start ssh-agent and add github key if available
+# start ssh-agent and add key if available
 eval "$(ssh-agent)" &>/dev/null
 
-if [[ -e ~/.ssh/github ]]; then
-  ssh-add -q ~/.ssh/github &>/dev/null
+if [[ -e ~/.ssh/key ]]; then
+  ssh-add -q ~/.ssh/key &>/dev/null
 fi
 
 # autostart X on tty1
