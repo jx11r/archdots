@@ -1,6 +1,5 @@
 /*
 
-!.gitconfig
 !.gitignore
 !.xinitrc
 !.zprofile
@@ -9,5 +8,4 @@
 !.config
 !.gnupg
 !.local
-!.ssh
 !.zsh
