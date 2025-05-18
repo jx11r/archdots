@@ -46,6 +46,7 @@ alias grm="git remote"
 alias grms="git remote set-url origin"
 alias gcm="git commit -m"
 alias gcma="git commit -a -m"
+alias gcmm="git commit"
 alias gpll="git pull"
 alias gpsh="git push"
 
