@@ -27,7 +27,6 @@ playerctl
 bat
 btop
 eza
-nano
 neovim
 rsync
 starship
