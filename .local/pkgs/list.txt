@@ -22,12 +22,6 @@ mypy
 pacman-contrib
 pamixer
 playerctl
-python-dbus-fast
-python-pip
-python-psutil
-python-virtualenv
-qtile
-qtile-extras (aur)
 
 # terminal tools
 bat
