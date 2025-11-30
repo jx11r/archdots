@@ -3,6 +3,7 @@
 btop/btop.log
 
 !.gitignore
+!awesome
 !bat
 !btop
 !gtk-3.0
