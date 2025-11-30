@@ -9,6 +9,8 @@ fi
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 setxkbmap us -variant altgr-intl &
+xfce4-power-manager &
+nm-applet &
 picom &
 wired &
 

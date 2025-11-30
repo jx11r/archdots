@@ -72,10 +72,12 @@ evince
 flameshot
 gpicview
 mpv
+network-manager-applet
 pavucontrol
 rofi
 visual-studio-code-bin (aur)
 wired (aur)
+xfce4-power-manager
 
 # theming
 gnome-themes-extra
