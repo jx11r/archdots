@@ -24,6 +24,7 @@ mypy
 pacman-contrib
 pamixer
 playerctl
+vicious
 
 # terminal tools
 bat
