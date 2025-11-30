@@ -12,11 +12,13 @@ reflector
 rtkit
 xdg-desktop-portal-gtk
 xdg-utils
+xorg-xrandr
 xorg-server
 xorg-server-xephyr
 xorg-xinit
 
 # window manager
+awesome
 brightnessctl
 mypy
 pacman-contrib
@@ -69,6 +71,7 @@ evince
 flameshot
 gpicview
 mpv
+pavucontrol
 rofi
 visual-studio-code-bin (aur)
 wired (aur)
