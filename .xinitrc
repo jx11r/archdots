@@ -8,9 +8,6 @@ if [[ -d /etc/X11/xinit/xinitrc.d ]]; then
 fi
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-# TODO: fix issues with thunar
-# ~/.local/bin/clipboard.sh &
-
 setxkbmap us -variant altgr-intl &
 picom &
 wired &
