@@ -16,7 +16,7 @@ return {
   show_update_window = false,
 
   -- colorschemes
-  color_scheme = 'Gruvbox Material (Gogh)',
+  color_scheme = 'Tokyo Night',
 
   -- font
   font_size = 11,

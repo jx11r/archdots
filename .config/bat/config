@@ -1,4 +1,4 @@
---theme=gruvbox-material-dark
+--theme=tokyonight_night
 --style=plain
 --tabs=2
 --paging=never
