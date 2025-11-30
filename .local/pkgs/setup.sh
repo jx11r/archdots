@@ -15,9 +15,9 @@ fi
 
 PAM_FILE="/etc/pam.d/login"
 if ! grep -q "pam_gnome_keyring.so" "$PAM_FILE"; then
-  sudo cp $PAM_FILE "${PAM_FILE}.old"
-  sudo sed -i "6 i auth       optional     pam_gnome_keyring.so" $PAM_FILE
-  sudo echo "session    optional     pam_gnome_keyring.so auto_start" >> $PAM_FILE
+  sudo cp --preserve=all $PAM_FILE "${PAM_FILE}.bk"
+  sudo sed -i "5i auth       optional     pam_gnome_keyring.so" $PAM_FILE
+  sudo sed -i "8i session    optional     pam_gnome_keyring.so auto_start" $PAM_FILE
   echo -e " ${blue}${PAM_FILE}${reset} updated"
 else
   echo -e " ${blue}${PAM_FILE}${reset} already configured"
