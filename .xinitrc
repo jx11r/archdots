@@ -12,4 +12,4 @@ setxkbmap us -variant altgr-intl &
 picom &
 wired &
 
-exec qtile start
+#exec

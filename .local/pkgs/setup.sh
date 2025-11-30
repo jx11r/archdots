@@ -23,9 +23,6 @@ else
   echo -e " ${blue}${PAM_FILE}${reset} already configured"
 fi
 
-echo  " cloning qtile config..."
-git clone https://github.com/jx11r/qtile.git ~/.config/qtile
-
 echo " building bat cache..."
 bat cache --build
 

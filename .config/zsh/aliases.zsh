@@ -26,7 +26,6 @@ alias fetch="neofetch"
 alias Xp="Xephyr -screen 1920x1080 :1 &"
 alias Xp1="Xephyr -screen 1024x598 :1 &"
 alias Xp2="Xephyr -screen 1024x498 -screen 1024x498 +xinerama :1 &"
-alias DS="DISPLAY=:1.0 QTILE_XEPHYR=1 qtile start -l INFO"
 
 alias ga="git add"
 alias gb="git branch"
