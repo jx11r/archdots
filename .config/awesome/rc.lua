@@ -325,7 +325,10 @@ globalkeys = gears.table.join(
   awful.key({}, "XF86MonBrightnessUp", function() awful.spawn("brightnessctl set +5%") end),
   awful.key({}, "XF86AudioMute", function() awful.spawn("pamixer --toggle-mute") end),
   awful.key({}, "XF86AudioLowerVolume", function() awful.spawn("pamixer --decrease 3") end),
-  awful.key({}, "XF86AudioRaiseVolume", function() awful.spawn("pamixer --increase 3") end)
+  awful.key({}, "XF86AudioRaiseVolume", function() awful.spawn("pamixer --increase 3") end),
+  awful.key({}, "XF86AudioPlay", function() awful.spawn("playerctl play-pause") end),
+  awful.key({}, "XF86AudioPrev", function() awful.spawn("playerctl previous") end),
+  awful.key({}, "XF86AudioNext", function() awful.spawn("playerctl next") end)
 )
 
 clientkeys = gears.table.join(
