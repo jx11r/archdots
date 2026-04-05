@@ -6,6 +6,7 @@ export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export EDITOR="nvim"
 export VISUAL="nvim"
+[[ -f "$HOME/.zenv" ]] && source "$HOME/.zenv"
 
 # bind gpg-agent to this TTY if gpg commands are used
 export GPG_TTY=$(tty)
