@@ -13,8 +13,8 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 # start ssh-agent and add key if available
 eval "$(ssh-agent)" &>/dev/null
 
-if [[ -e ~/.ssh/key ]]; then
-  ssh-add -q ~/.ssh/key &>/dev/null
+if [[ -f "$HOME/.ssh/key" ]]; then
+  ssh-add -q "$HOME/.ssh/key" &>/dev/null
 fi
 
 # autostart X on tty1
