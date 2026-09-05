@@ -13,7 +13,6 @@ return {
   force_reverse_video_cursor = true,
   line_height = 1.0,
   scrollback_lines = 3500,
-  show_update_window = false,
 
   -- colorschemes
   color_scheme = 'Tokyo Night',
