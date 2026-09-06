@@ -29,20 +29,19 @@ awful.rules.rules = {
         "Arandr",
         "Blueman-manager",
         "Gpick",
-        "gpicview",
+        "Gpicview",
         "Kruler",
         "kvantummanager",
-        "lxappearance",
+        "Lxappearance",
         "MessageWin",
         "pavucontrol",
         "qt5ct",
         "Sxiv",
         "Tor Browser",
-        "thunar",
         "Thunar",
         "Wpa_gui",
         "veromix",
-        "xfce4-about",
+        "Xfce4-about",
         "xtightvncviewer",
       },
       name = {
@@ -61,6 +60,6 @@ awful.rules.rules = {
   {
     rule_any = { type = { "normal", "dialog" }
     },
-    properties = { titlebars_enabled = true }
+    properties = { titlebars_enabled = false }
   },
 }
