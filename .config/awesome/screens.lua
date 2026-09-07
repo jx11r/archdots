@@ -2,6 +2,11 @@ local gears = require("gears")
 local awful = require("awful")
 local wibox = require("wibox")
 local beautiful = require("beautiful")
+local lain = require("lain")
+local widgets = require("widgets")
+
+local markup = lain.util.markup
+local palette = beautiful.palette
 
 -- create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -56,12 +61,91 @@ end
 -- re-set wallpaper when a screen's geometry changes
 screen.connect_signal("property::geometry", set_wallpaper)
 
-mykeyboardlayout = awful.widget.keyboardlayout()
-mytextclock = wibox.widget.textclock()
+local function fg(text, color, bold)
+  local content = bold and ("<b>" .. text .. "</b>") or text
+  return '<span foreground="' .. color .. '">' .. content .. '</span>'
+end
+
+local function sep(width)
+  return wibox.widget {
+    forced_width = width,
+    opacity = 0,
+    widget = wibox.widget.separator,
+  }
+end
+
+local function icon(text, color, size)
+  local font = size and (beautiful.icon_font_n .. " " .. size) or beautiful.icon_font
+  return wibox.widget {
+    markup = fg(text, color),
+    align = "center",
+    valign = "center",
+    font = font,
+    widget = wibox.widget.textbox,
+  }
+end
+
+local sep2 = wibox.widget {
+  markup = fg("󰇙", palette.gray),
+  align = "center",
+  valign = "center",
+  font = beautiful.icon_font_n .. " 8",
+  widget = wibox.widget.textbox,
+}
+
+local textclock = wibox.widget {
+  format = fg("%H:%M", palette.magenta, true),
+  widget = wibox.widget.textclock,
+}
+
+local textdate = wibox.widget {
+  format = fg("%d/%b", palette.blue, true),
+  widget = wibox.widget.textclock,
+}
+
+local volume = widgets.volume {
+  timeout = 1,
+  settings = function(volume)
+    volume.widget:set_markup(fg(volume.value, palette.green, true))
+  end
+}
+
+local mem = lain.widget.mem {
+  settings = function()
+    widget:set_markup(fg(mem_now.used .. "M", palette.yellow, true))
+  end
+}
+
+local cpu = lain.widget.cpu {
+  settings = function()
+    widget:set_markup(fg(cpu_now.usage .. "%", palette.red, true))
+  end
+}
+
+local temp = lain.widget.temp {
+  format = "%.0f",
+  settings = function()
+    widget:set_markup(fg(coretemp_now .. "°C", palette.orange, true))
+  end
+}
+
+local fs_home = lain.widget.fs {
+  timeout = 60,
+  settings = function()
+    widget:set_markup(fg(fs_now["/home"].percentage .. "%", palette.teal, true))
+  end
+}
+
+local fs_root = lain.widget.fs {
+  timeout = 60,
+  settings = function()
+    widget:set_markup(fg(fs_now["/"].percentage .. "%", palette.green2, true))
+  end
+}
 
 awful.screen.connect_for_each_screen(function(s)
   set_wallpaper(s)
-  awful.tag({ "1", "2", "3", "4", "5", "6" }, s, awful.layout.layouts[1])
+  awful.tag({ "term", "code", "web", "media", "mail", "other" }, s, awful.layout.layouts[1])
 
   s.mypromptbox = awful.widget.prompt()
   s.mylayoutbox = awful.widget.layoutbox(s)
@@ -83,23 +167,66 @@ awful.screen.connect_for_each_screen(function(s)
     buttons = tasklist_buttons
   }
 
-  s.mywibox = awful.wibar({ position = "top", screen = s })
+  s.mywibox = awful.wibar({
+    position     = "top",
+    screen       = s,
+    stretch      = false,
+    height       = 20,
+    border_width = 4,
+    width        = s.geometry.width - 28,
+  })
+
+  s.mywibox.y = 10
+  s.mywibox:struts({
+    top = 20 + 18
+  })
 
   s.mywibox:setup {
-    layout = wibox.layout.align.horizontal,
     {
-      layout = wibox.layout.fixed.horizontal,
-      mylauncher,
-      s.mytaglist,
-      s.mypromptbox,
+      layout = wibox.layout.align.horizontal,
+      {
+        layout = wibox.layout.fixed.horizontal,
+        icon("", palette.cyan, 14),
+        sep(6),
+        s.mytaglist,
+        sep2,
+      },
+      s.mytasklist,
+      {
+        layout = wibox.layout.fixed.horizontal,
+        sep2,
+        sep(6),
+        wibox.widget.systray(),
+        sep(6),
+        icon(" ", palette.green),
+        volume.widget,
+        sep(6),
+        icon(" ", palette.orange),
+        temp.widget,
+        sep(8),
+        icon("󰍛 ", palette.red),
+        cpu.widget,
+        sep(8),
+        icon(" ", palette.yellow),
+        mem.widget,
+        sep(8),
+        icon("󰌽 ", palette.green2),
+        fs_root.widget,
+        sep(8),
+        icon(" ", palette.teal),
+        fs_home.widget,
+        sep(8),
+        icon("󰃭 ", palette.blue),
+        textdate,
+        sep(8),
+        icon("󰥔 ", palette.magenta),
+        textclock,
+        sep(6),
+        s.mylayoutbox,
+      },
     },
-    s.mytasklist,
-    {
-      layout = wibox.layout.fixed.horizontal,
-      mykeyboardlayout,
-      wibox.widget.systray(),
-      mytextclock,
-      s.mylayoutbox,
-    },
+    left = 8,
+    right = 8,
+    layout = wibox.container.margin,
   }
 end)

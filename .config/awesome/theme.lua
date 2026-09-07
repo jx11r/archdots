@@ -12,24 +12,44 @@ local home                                      = os.getenv("HOME")
 
 local theme                                     = {}
 
-theme.font                                      = "sans 8"
+theme.font_n                                    = "Hasklug Nerd Font Mono"
+theme.icon_font_n                               = "Symbols Nerd Font Mono"
 
-theme.bg_normal                                 = "#222222"
-theme.bg_focus                                  = "#535d6c"
-theme.bg_urgent                                 = "#ff0000"
-theme.bg_minimize                               = "#444444"
+theme.font                                      = theme.font_n .. " 9"
+theme.icon_font                                 = theme.icon_font_n .. " 10"
+
+theme.bg_normal                                 = "#1a1b26"
+theme.bg_focus                                  = "#1a1b26"
+theme.bg_urgent                                 = "#db4b4b"
+theme.bg_minimize                               = "#292e42"
 theme.bg_systray                                = theme.bg_normal
 
-theme.fg_normal                                 = "#aaaaaa"
-theme.fg_focus                                  = "#ffffff"
-theme.fg_urgent                                 = "#ffffff"
-theme.fg_minimize                               = "#ffffff"
+theme.fg_normal                                 = "#c0caf5"
+theme.fg_focus                                  = "#c0caf5"
+theme.fg_urgent                                 = "#c0caf5"
+theme.fg_minimize                               = "#a9b1d6"
 
-theme.useless_gap                               = dpi(0)
-theme.border_width                              = dpi(1)
-theme.border_normal                             = "#000000"
-theme.border_focus                              = "#535d6c"
-theme.border_marked                             = "#91231c"
+theme.useless_gap                               = dpi(5)
+theme.border_width                              = dpi(0)
+
+theme.wibar_bg                                  = theme.bg_normal
+theme.wibar_fg                                  = theme.fg_normal
+theme.wibar_border_color                        = theme.bg_normal
+-- theme.wibar_border_color                        = "#ffffff"
+
+theme.palette                                   = {
+  blue = "#7aa2f7",
+  cyan = "#7dcfff",
+  green = "#9ece6a",
+  green1 = "#73daca",
+  green2 = "#41a6b5",
+  magenta = "#bb9af7",
+  orange = "#ff9e64",
+  red = "#f7768e",
+  yellow = "#e0af68",
+  teal = "#1abc9c",
+  gray = "#565f89",
+}
 
 -- There are other variable sets
 -- overriding the default one when
