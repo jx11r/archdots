@@ -33,7 +33,9 @@ awful.rules.rules = {
         "Kruler",
         "kvantummanager",
         "Lxappearance",
+        "lstopo",
         "MessageWin",
+        "mpv",
         "pavucontrol",
         "qt5ct",
         "Sxiv",
@@ -47,6 +49,7 @@ awful.rules.rules = {
       },
       name = {
         "Event Tester",
+        "Power Manager",
       },
       role = {
         "AlarmWindow",
