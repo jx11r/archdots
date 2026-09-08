@@ -44,6 +44,7 @@ awful.rules.rules = {
         "veromix",
         "Wpa_gui",
         "wt-floating",
+        "Xephyr",
         "Xfce4-about",
         "xtightvncviewer",
       },
