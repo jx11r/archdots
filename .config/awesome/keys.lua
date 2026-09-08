@@ -60,7 +60,9 @@ local globalkeys = gears.table.join(
 
   -- standard program
   awful.key({ modkey, }, "Return", function() awful.spawn(terminal) end,
-    { description = "open a terminal", group = "launcher" }),
+    { description = "open terminal", group = "launcher" }),
+  awful.key({modkey, "Shift"}, "Return", function() awful.spawn("wezterm start --class wt-floating") end,
+    { description = "open terminal (floating)", group = "launcher"}),
   awful.key({ modkey, "Control" }, "r", awesome.restart,
     { description = "reload awesome", group = "awesome" }),
   awful.key({ modkey, "Control" }, "s", awesome.quit,

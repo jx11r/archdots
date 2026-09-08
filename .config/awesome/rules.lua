@@ -39,8 +39,9 @@ awful.rules.rules = {
         "Sxiv",
         "Tor Browser",
         "Thunar",
-        "Wpa_gui",
         "veromix",
+        "Wpa_gui",
+        "wt-floating",
         "Xfce4-about",
         "xtightvncviewer",
       },
@@ -53,7 +54,10 @@ awful.rules.rules = {
         "pop-up",
       }
     },
-    properties = { floating = true }
+    properties = {
+      floating = true,
+      placement = awful.placement.centered,
+    }
   },
 
   -- add titlebars to normal clients and dialogs
