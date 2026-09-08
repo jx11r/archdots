@@ -103,13 +103,6 @@ local textdate = wibox.widget {
   widget = wibox.widget.textclock,
 }
 
-local volume = widgets.volume {
-  timeout = 1,
-  settings = function(volume)
-    volume.widget:set_markup(fg(volume.value, palette.green, true))
-  end
-}
-
 local mem = lain.widget.mem {
   settings = function()
     widget:set_markup(fg(mem_now.used .. "M", palette.yellow, true))
@@ -143,11 +136,28 @@ local fs_root = lain.widget.fs {
   end
 }
 
+local volume = widgets.volume {
+  timeout = 1,
+  settings = function(volume)
+    local text = volume.value
+    if volume.value == "muted" then
+      text = "M"
+    end
+    volume.widget:set_markup(fg(text, palette.green, true))
+  end
+}
+
+local updates = widgets.checkupdates {
+  initial_text = "0",
+  settings = function(updates)
+    updates.widget:set_markup(fg(updates.count, palette.purple, true))
+  end
+}
+
 awful.screen.connect_for_each_screen(function(s)
   set_wallpaper(s)
   awful.tag({ "term", "code", "web", "media", "mail", "other" }, s, awful.layout.layouts[1])
 
-  s.mypromptbox = awful.widget.prompt()
   s.mylayoutbox = awful.widget.layoutbox(s)
   s.mylayoutbox:buttons(gears.table.join(
     awful.button({}, 1, function() awful.layout.inc(1) end),
@@ -195,33 +205,35 @@ awful.screen.connect_for_each_screen(function(s)
       {
         layout = wibox.layout.fixed.horizontal,
         sep2,
-        sep(6),
         wibox.widget.systray(),
-        sep(6),
-        icon(" ", palette.green),
+        sep(3),
+        icon("", palette.green),
         volume.widget,
-        sep(6),
-        icon(" ", palette.orange),
+        sep(4),
+        icon("", palette.orange),
         temp.widget,
-        sep(8),
+        sep(6),
         icon("󰍛 ", palette.red),
         cpu.widget,
-        sep(8),
+        sep(6),
         icon(" ", palette.yellow),
         mem.widget,
-        sep(8),
+        sep(5),
+        icon(" ", palette.purple),
+        updates.widget,
+        sep(5),
         icon("󰌽 ", palette.green2),
         fs_root.widget,
-        sep(8),
+        sep(6),
         icon(" ", palette.teal),
         fs_home.widget,
-        sep(8),
+        sep(6),
         icon("󰃭 ", palette.blue),
         textdate,
-        sep(8),
+        sep(6),
         icon("󰥔 ", palette.magenta),
         textclock,
-        sep(6),
+        sep(5),
         s.mylayoutbox,
       },
     },

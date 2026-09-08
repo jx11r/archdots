@@ -38,6 +38,7 @@ theme.wibar_border_color                        = theme.bg_normal
 -- theme.wibar_border_color                        = "#ffffff"
 
 theme.palette                                   = {
+  fg = theme.fg_normal,
   blue = "#7aa2f7",
   cyan = "#7dcfff",
   green = "#9ece6a",
@@ -45,6 +46,7 @@ theme.palette                                   = {
   green2 = "#41a6b5",
   magenta = "#bb9af7",
   orange = "#ff9e64",
+  purple = "#9d7cd8",
   red = "#f7768e",
   yellow = "#e0af68",
   teal = "#1abc9c",
