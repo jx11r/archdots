@@ -70,4 +70,14 @@ awful.rules.rules = {
     },
     properties = { titlebars_enabled = false }
   },
+
+  -- tag assignment
+  { rule = { class = "code" },          properties = { tag = "2" } },
+  { rule = { class = "insomnia" },      properties = { tag = "3" } },
+  { rule = { class = "Gimp" },          properties = { tag = "4" } },
+  { rule = { class = "obs" },           properties = { tag = "4" } },
+  { rule = { class = "Brave-browser" }, properties = { tag = "q" } },
+  { rule = { class = "discord" },       properties = { tag = "w" } },
+  { rule = { class = "Telegram" },      properties = { tag = "w" } },
+  { rule = { class = "Evince" },        properties = { tag = "e" } },
 }

@@ -172,14 +172,14 @@ awful.screen.connect_for_each_screen(function(s)
     font = beautiful.font_n .. " 15",
     inactive = palette.gray,
     colors  = {
-      palette.magenta,
-      palette.blue,
-      palette.green2,
       palette.teal,
-      palette.purple,
-      palette.yellow,
-      palette.orange,
+      palette.blue,
+      palette.magenta,
       palette.red,
+      palette.orange,
+      palette.green1,
+      palette.yellow,
+      palette.purple,
     },
   }
 
