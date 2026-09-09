@@ -23,11 +23,12 @@ xorg-xinit
 # window manager
 awesome
 brightnessctl
+lain-git (aur)
 mypy
 pacman-contrib
 pamixer
 playerctl
-vicious
+
 
 # terminal tools
 bat
