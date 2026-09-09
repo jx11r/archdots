@@ -156,7 +156,7 @@ local updates = widgets.checkupdates {
 
 awful.screen.connect_for_each_screen(function(s)
   set_wallpaper(s)
-  awful.tag({ "term", "code", "web", "media", "mail", "other" }, s, awful.layout.layouts[1])
+  awful.tag({ "1", "2", "3", "4", "q", "w", "e", "r" }, s, awful.layout.layouts[1])
 
   s.mylayoutbox = awful.widget.layoutbox(s)
   s.mylayoutbox:buttons(gears.table.join(
@@ -165,10 +165,22 @@ awful.screen.connect_for_each_screen(function(s)
     awful.button({}, 4, function() awful.layout.inc(1) end),
     awful.button({}, 5, function() awful.layout.inc(-1) end)))
 
-  s.mytaglist = awful.widget.taglist {
+  s.mytaglist = widgets.taglist {
     screen  = s,
     filter  = awful.widget.taglist.filter.all,
-    buttons = taglist_buttons
+    buttons = taglist_buttons,
+    font = beautiful.font_n .. " 15",
+    inactive = palette.gray,
+    colors  = {
+      palette.magenta,
+      palette.blue,
+      palette.green2,
+      palette.teal,
+      palette.purple,
+      palette.yellow,
+      palette.orange,
+      palette.red,
+    },
   }
 
   s.mytasklist = awful.widget.tasklist {
@@ -199,6 +211,7 @@ awful.screen.connect_for_each_screen(function(s)
         icon("", palette.cyan, 14),
         sep(6),
         s.mytaglist,
+        sep(3),
         sep2,
       },
       s.mytasklist,

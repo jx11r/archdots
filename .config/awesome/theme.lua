@@ -39,6 +39,7 @@ theme.wibar_border_color                        = theme.bg_normal
 
 theme.palette                                   = {
   fg = theme.fg_normal,
+  fg_dark = "#a9b1d6",
   blue = "#7aa2f7",
   cyan = "#7dcfff",
   green = "#9ece6a",
