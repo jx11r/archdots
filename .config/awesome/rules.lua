@@ -1,6 +1,6 @@
 local awful = require("awful")
 local beautiful = require("beautiful")
-local keys = require("keys")
+local bindings = require("bindings")
 
 awful.rules.rules = {
   {
@@ -10,8 +10,8 @@ awful.rules.rules = {
       border_color = beautiful.border_normal,
       focus = awful.client.focus.filter,
       raise = true,
-      keys = keys.clientkeys,
-      buttons = keys.clientbuttons,
+      keys = bindings.client_keys,
+      buttons = bindings.client_buttons,
       screen = awful.screen.preferred,
       placement = awful.placement.no_overlap + awful.placement.no_offscreen
     }
@@ -61,6 +61,7 @@ awful.rules.rules = {
     properties = {
       floating = true,
       placement = awful.placement.centered,
+      ontop = true,
     }
   },
 
