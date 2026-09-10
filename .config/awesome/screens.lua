@@ -26,12 +26,12 @@ awful.screen.connect_for_each_screen(function(s)
   s.mylayoutbox = awful.widget.layoutbox(s)
 
   s.mytaglist = custom.taglist {
-    screen  = s,
-    filter  = awful.widget.taglist.filter.all,
-    buttons = bindings.taglist_buttons,
-    font = beautiful.font_n .. " 15",
+    screen   = s,
+    filter   = awful.widget.taglist.filter.all,
+    buttons  = bindings.taglist_buttons,
+    font     = beautiful.font_n .. " 15",
     inactive = beautiful.palette.gray,
-    colors  = tags.colors,
+    colors   = tags.colors,
   }
 
   s.mytasklist = awful.widget.tasklist {

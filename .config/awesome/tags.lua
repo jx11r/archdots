@@ -17,9 +17,9 @@ local tags = {
   { name = "3", icon = "󰆼", color = c.magenta, layout = layouts[1] },
   { name = "4", icon = "󰹍", color = c.red, layout = layouts[1] },
   { name = "q", icon = "󰈹", color = c.orange, layout = layouts[1] },
-  { name = "w", icon = "󰈹", color = c.green1, layout = layouts[1] },
+  { name = "w", icon = "󰇮", color = c.green1, layout = layouts[1] },
   { name = "e", icon = "󰝰", color = c.yellow, layout = layouts[1] },
-  { name = "r", icon = "󰝰", color = c.purple, layout = layouts[1] },
+  { name = "r", icon = "", color = c.purple, layout = layouts[1] },
 }
 
 M.setup = function(screen)
@@ -41,7 +41,8 @@ local function extract_property(key)
 end
 
 awful.layout.layouts = layouts
-M.keys = extract_property("name")
 M.colors = extract_property("color")
+M.icons = extract_property("icon")
+M.keys = extract_property("name")
 
 return M
