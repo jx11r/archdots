@@ -61,6 +61,8 @@ M.tasklist_buttons = gears.table.join(
 local keys = gears.table.join(
   awful.key({ mod, }, "z", hotkeys_popup.show_help,
     { description = "show help", group = "awesome" }),
+  awful.key({ mod, }, "Escape", awful.tag.history.restore,
+    { description = "go back", group = "tag" }),
   awful.key({ mod, }, "j",
     function()
       awful.client.focus.byidx(1)
