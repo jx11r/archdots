@@ -78,6 +78,7 @@ local updates = custom.checkupdates {
 }
 
 function M.setup(s)
+  local primary = s.index == 1
   return {
     layout = wibox.layout.align.horizontal,
     {
@@ -89,7 +90,7 @@ function M.setup(s)
       sep,
     },
     s.mytasklist,
-    {
+    primary and {
       layout = wibox.layout.fixed.horizontal,
       sep,
       wibox.widget.systray(),
@@ -121,6 +122,11 @@ function M.setup(s)
       utils.icon("󰥔 ", c.magenta),
       textclock,
       utils.spacer(5),
+      s.mylayoutbox,
+    } or {
+      layout = wibox.layout.fixed.horizontal,
+      sep,
+      utils.spacer(2),
       s.mylayoutbox,
     },
   }
