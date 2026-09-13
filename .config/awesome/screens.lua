@@ -7,6 +7,7 @@ local tags = require("tags")
 local widgets = require("widgets")
 local custom = require("widgets.custom")
 
+local palette = beautiful.palette
 local function set_wallpaper(s)
   if beautiful.wallpaper then
     local wallpaper = beautiful.wallpaper
@@ -29,8 +30,8 @@ awful.screen.connect_for_each_screen(function(s)
     screen   = s,
     filter   = awful.widget.taglist.filter.all,
     buttons  = bindings.taglist_buttons,
-    font     = beautiful.font_n .. " 15",
-    inactive = beautiful.palette.gray,
+    font     = beautiful.fonts.text(15),
+    inactive = palette.gray,
     colors   = tags.colors,
   }
 
@@ -38,20 +39,25 @@ awful.screen.connect_for_each_screen(function(s)
     screen  = s,
     filter  = awful.widget.tasklist.filter.currenttags,
     buttons = bindings.tasklist_buttons,
+    style   = {
+      fg_normal = palette.gray,
+      fg_focus = palette.fg,
+    }
   }
 
   s.mywibox = awful.wibar({
     position     = "top",
     screen       = s,
     stretch      = false,
-    height       = 20,
+    height       = beautiful.dpi(20, s),
     border_width = 4,
+    border_color = beautiful.bg_normal,
     width        = s.geometry.width - 28,
   })
 
   s.mywibox.y = 10
   s.mywibox:struts({
-    top = 20 + 18
+    top = beautiful.dpi(20, s) + 18
   })
 
   s.mywibox:setup {

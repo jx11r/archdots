@@ -8,14 +8,14 @@ local status_icons = {
   occupied = "",
 }
 
-local function by_state(self, tag, index, colors, icons, inactive)
+local function by_state(self, tag, index, colors, _, inactive)
   local text = self:get_children_by_id("tag_icon")[1]
   local color = colors[index] or beautiful.fg_normal
   local icon
 
   if tag.urgent then
     icon = status_icons.occupied
-    color = beautiful.bg_urgent
+    color = beautiful.fg_urgent
   elseif tag.selected then
     icon = status_icons.active
   elseif #tag:clients() > 0 then
@@ -25,13 +25,7 @@ local function by_state(self, tag, index, colors, icons, inactive)
     color = inactive
   end
 
-  text:set_markup(
-    string.format(
-      "<span foreground='%s'>%s</span>",
-      color,
-      icon
-    )
-  )
+  text:set_markup(string.format("<span foreground='%s'>%s</span>", color, icon))
 end
 
 -- TODO: improve when tag is selected
@@ -48,13 +42,7 @@ local function by_icon(self, tag, index, colors, icons, inactive)
     color = inactive
   end
 
-  text:set_markup(
-    string.format(
-      "<span foreground='%s'>%s</span>",
-      color,
-      icon
-    )
-  )
+  text:set_markup(string.format("<span foreground='%s'>%s</span>", color, icon))
 end
 
 return function(args)

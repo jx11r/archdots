@@ -1,5 +1,6 @@
 local awful = require("awful")
 local beautiful = require("beautiful")
+local helper = require("helper")
 
 local c = beautiful.palette
 local M = {}
@@ -32,17 +33,9 @@ M.setup = function(screen)
   end
 end
 
-local function extract_property(key)
-    local list = {}
-    for _, tag in ipairs(tags) do
-        table.insert(list, tag[key])
-    end
-    return list
-end
+M.colors = helper.extract_property(tags, "color")
+M.icons = helper.extract_property(tags, "icon")
+M.keys = helper.extract_property(tags, "name")
 
 awful.layout.layouts = layouts
-M.colors = extract_property("color")
-M.icons = extract_property("icon")
-M.keys = extract_property("name")
-
 return M

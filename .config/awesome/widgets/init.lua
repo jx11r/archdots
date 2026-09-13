@@ -12,7 +12,7 @@ local sep = wibox.widget {
   markup = utils.fg("󰇙", c.gray),
   align = "center",
   valign = "center",
-  font = beautiful.icon_font_n .. " 8",
+  font = beautiful.fonts.icon(8),
   widget = wibox.widget.textbox,
 }
 
@@ -61,20 +61,19 @@ local fs_root = lain.widget.fs {
 
 local volume = custom.volume {
   timeout = 1,
-  settings = function(volume)
-    local text = volume.value
-    if volume.value == "muted" then
+  settings = function(self)
+    local text = self.value
+    if self.value == "muted" then
       text = "M"
     end
-    volume.widget:set_markup(utils.fg(text, c.green, true))
+    self.widget:set_markup(utils.fg(text, c.green, true))
   end
 }
 
 local updates = custom.checkupdates {
-  custom_command = os.getenv("XEPHYR") and "" or "checkupdates",
   initial_text = "0",
-  settings = function(updates)
-    updates.widget:set_markup(utils.fg(updates.count, c.purple, true))
+  settings = function(self)
+    self.widget:set_markup(utils.fg(self.count, c.purple, true))
   end
 }
 

@@ -1,153 +1,94 @@
----------------------------
--- Default awesome theme --
----------------------------
+local theme_assets = require("beautiful.theme_assets")
+local xresources = require("beautiful.xresources")
+local gfs = require("gears.filesystem")
+local helper = require("helper")
 
-local theme_assets                              = require("beautiful.theme_assets")
-local xresources                                = require("beautiful.xresources")
-local dpi                                       = xresources.apply_dpi
+local default = gfs.get_themes_dir() .. "default/"
+local home = os.getenv("HOME")
+local M = {}
 
-local gfs                                       = require("gears.filesystem")
-local themes_path                               = gfs.get_themes_dir()
-local home                                      = os.getenv("HOME")
-
-local theme                                     = {}
-
-theme.font_n                                    = "Hasklug Nerd Font Mono"
-theme.icon_font_n                               = "Symbols Nerd Font Mono"
-
-theme.font                                      = theme.font_n .. " 9"
-theme.icon_font                                 = theme.icon_font_n .. " 10"
-
-theme.bg_normal                                 = "#1a1b26"
-theme.bg_focus                                  = "#1a1b26"
-theme.bg_urgent                                 = "#db4b4b"
-theme.bg_minimize                               = "#292e42"
-theme.bg_systray                                = theme.bg_normal
-
-theme.fg_normal                                 = "#c0caf5"
-theme.fg_focus                                  = "#c0caf5"
-theme.fg_urgent                                 = "#c0caf5"
-theme.fg_minimize                               = "#a9b1d6"
-
-theme.useless_gap                               = dpi(5)
-theme.border_width                              = dpi(0)
-
-theme.wibar_bg                                  = theme.bg_normal
-theme.wibar_fg                                  = theme.fg_normal
-theme.wibar_border_color                        = theme.bg_normal
--- theme.wibar_border_color                        = "#ffffff"
-
-theme.palette                                   = {
-  fg = theme.fg_normal,
-  fg_dark = "#a9b1d6",
-  blue = "#7aa2f7",
-  cyan = "#7dcfff",
-  green = "#9ece6a",
-  green1 = "#73daca",
-  green2 = "#41a6b5",
-  magenta = "#bb9af7",
-  orange = "#ff9e64",
-  purple = "#9d7cd8",
-  red = "#f7768e",
-  yellow = "#e0af68",
-  teal = "#1abc9c",
-  gray = "#565f89",
+local palette = {
+  bg           = "#1a1b26",
+  bg_dark      = "#16161e",
+  bg_dark1     = "#0C0E14",
+  bg_highlight = "#292e42",
+  fg           = "#c0caf5",
+  fg_dark      = "#a9b1d6",
+  fg_gutter    = "#3b4261",
+  blue         = "#7aa2f7",
+  blue0        = "#3d59a1",
+  blue1        = "#2ac3de",
+  blue2        = "#0db9d7",
+  blue5        = "#89ddff",
+  blue6        = "#b4f9f8",
+  blue7        = "#394b70",
+  cyan         = "#7dcfff",
+  green        = "#9ece6a",
+  green1       = "#73daca",
+  green2       = "#41a6b5",
+  magenta      = "#bb9af7",
+  magenta2     = "#ff007c",
+  orange       = "#ff9e64",
+  purple       = "#9d7cd8",
+  red          = "#f7768e",
+  red1         = "#db4b4b",
+  teal         = "#1abc9c",
+  yellow       = "#e0af68",
+  gray         = "#565f89",
+  black        = "#414868",
+  dark3        = "#545c7e",
+  dark5        = "#737aa2",
 }
 
--- There are other variable sets
--- overriding the default one when
--- defined, the sets are:
--- taglist_[bg|fg]_[focus|urgent|occupied|empty|volatile]
--- tasklist_[bg|fg]_[focus|urgent]
--- titlebar_[bg|fg]_[normal|focus]
--- tooltip_[font|opacity|fg_color|bg_color|border_width|border_color]
--- mouse_finder_[color|timeout|animate_timeout|radius|factor]
--- prompt_[fg|bg|fg_cursor|bg_cursor|font]
--- hotkeys_[bg|fg|border_width|border_color|shape|opacity|modifiers_fg|label_bg|label_fg|group_margin|font|description_font]
--- Example:
--- theme.taglist_bg_focus = "#ff0000"
+M.dpi = xresources.apply_dpi
+M.palette = palette
 
--- Generate taglist squares:
-local taglist_square_size                       = dpi(4)
-theme.taglist_squares_sel                       = theme_assets.taglist_squares_sel(
-  taglist_square_size, theme.fg_normal
-)
-theme.taglist_squares_unsel                     = theme_assets.taglist_squares_unsel(
-  taglist_square_size, theme.fg_normal
-)
+M.bg_normal = palette.bg
+M.bg_focus = palette.bg
+M.bg_urgent = palette.bg_highlight
+M.bg_minimize = palette.bg_highlight
 
--- Variables set for theming notifications:
--- notification_font
--- notification_[bg|fg]
--- notification_[width|height|margin]
--- notification_[border_color|border_width|shape|opacity]
+M.fg_normal = palette.fg
+M.fg_focus = palette.fg
+M.fg_urgent = palette.red1
+M.fg_minimize = palette.fg_dark
 
--- Variables set for theming the menu:
--- menu_[bg|fg]_[normal|focus]
--- menu_[border_color|border_width]
-theme.menu_submenu_icon                         = themes_path .. "default/submenu.png"
-theme.menu_height                               = dpi(15)
-theme.menu_width                                = dpi(100)
+M.wibar_bg = M.bg_normal
+M.wibar_fg = M.fg_normal
+M.systray_icon_spacing = 2
 
--- You can add as many variables as
--- you wish and access them by using
--- beautiful.variable in your rc.lua
---theme.bg_widget = "#cc0000"
+M.fonts = {
+  text = function(size) return string.format("%s %d", "Hasklug Nerd Font Mono", size) end,
+  icon = function(size) return string.format("%s %d", "Symbols Nerd Font Mono", size) end,
+}
 
--- Define the image to load
-theme.titlebar_close_button_normal              = themes_path .. "default/titlebar/close_normal.png"
-theme.titlebar_close_button_focus               = themes_path .. "default/titlebar/close_focus.png"
+M.font = M.fonts.text(9)
+M.icon_font = M.fonts.icon(10)
 
-theme.titlebar_minimize_button_normal           = themes_path .. "default/titlebar/minimize_normal.png"
-theme.titlebar_minimize_button_focus            = themes_path .. "default/titlebar/minimize_focus.png"
+-- clients
+M.useless_gap = 5
+M.border_width = 0
 
-theme.titlebar_ontop_button_normal_inactive     = themes_path .. "default/titlebar/ontop_normal_inactive.png"
-theme.titlebar_ontop_button_focus_inactive      = themes_path .. "default/titlebar/ontop_focus_inactive.png"
-theme.titlebar_ontop_button_normal_active       = themes_path .. "default/titlebar/ontop_normal_active.png"
-theme.titlebar_ontop_button_focus_active        = themes_path .. "default/titlebar/ontop_focus_active.png"
+-- get a random wallpaper
+local wallpapers_dir = home .. "/wallpapers/"
+if gfs.is_dir(wallpapers_dir) then
+  local wallpapers = helper.list_dir(wallpapers_dir)
+  if #wallpapers > 0 then
+    M.wallpaper = function()
+      return wallpapers_dir .. wallpapers[math.random(#wallpapers)]
+    end
+  end
+else
+  M.wallpaper = default .. "background.png"
+end
 
-theme.titlebar_sticky_button_normal_inactive    = themes_path .. "default/titlebar/sticky_normal_inactive.png"
-theme.titlebar_sticky_button_focus_inactive     = themes_path .. "default/titlebar/sticky_focus_inactive.png"
-theme.titlebar_sticky_button_normal_active      = themes_path .. "default/titlebar/sticky_normal_active.png"
-theme.titlebar_sticky_button_focus_active       = themes_path .. "default/titlebar/sticky_focus_active.png"
+-- load all layout icons from the default theme directory
+local layouts_dir = default .. "layouts/"
+for _, name in ipairs(helper.list_dir(layouts_dir)) do
+  local layout = name:match("^(.*)w%.png$")
+  if layout then
+    M["layout_" .. layout] = layouts_dir .. name
+  end
+end
 
-theme.titlebar_floating_button_normal_inactive  = themes_path .. "default/titlebar/floating_normal_inactive.png"
-theme.titlebar_floating_button_focus_inactive   = themes_path .. "default/titlebar/floating_focus_inactive.png"
-theme.titlebar_floating_button_normal_active    = themes_path .. "default/titlebar/floating_normal_active.png"
-theme.titlebar_floating_button_focus_active     = themes_path .. "default/titlebar/floating_focus_active.png"
-
-theme.titlebar_maximized_button_normal_inactive = themes_path .. "default/titlebar/maximized_normal_inactive.png"
-theme.titlebar_maximized_button_focus_inactive  = themes_path .. "default/titlebar/maximized_focus_inactive.png"
-theme.titlebar_maximized_button_normal_active   = themes_path .. "default/titlebar/maximized_normal_active.png"
-theme.titlebar_maximized_button_focus_active    = themes_path .. "default/titlebar/maximized_focus_active.png"
-
-theme.wallpaper                                 = home .. "/wallpapers/arch.png"
-
--- You can use your own layout icons like this:
-theme.layout_fairh                              = themes_path .. "default/layouts/fairhw.png"
-theme.layout_fairv                              = themes_path .. "default/layouts/fairvw.png"
-theme.layout_floating                           = themes_path .. "default/layouts/floatingw.png"
-theme.layout_magnifier                          = themes_path .. "default/layouts/magnifierw.png"
-theme.layout_max                                = themes_path .. "default/layouts/maxw.png"
-theme.layout_fullscreen                         = themes_path .. "default/layouts/fullscreenw.png"
-theme.layout_tilebottom                         = themes_path .. "default/layouts/tilebottomw.png"
-theme.layout_tileleft                           = themes_path .. "default/layouts/tileleftw.png"
-theme.layout_tile                               = themes_path .. "default/layouts/tilew.png"
-theme.layout_tiletop                            = themes_path .. "default/layouts/tiletopw.png"
-theme.layout_spiral                             = themes_path .. "default/layouts/spiralw.png"
-theme.layout_dwindle                            = themes_path .. "default/layouts/dwindlew.png"
-theme.layout_cornernw                           = themes_path .. "default/layouts/cornernww.png"
-theme.layout_cornerne                           = themes_path .. "default/layouts/cornernew.png"
-theme.layout_cornersw                           = themes_path .. "default/layouts/cornersww.png"
-theme.layout_cornerse                           = themes_path .. "default/layouts/cornersew.png"
-
--- Generate Awesome icon:
-theme.awesome_icon                              = theme_assets.awesome_icon(
-  theme.menu_height, theme.bg_focus, theme.fg_focus
-)
-
--- Define the icon theme for application icons. If not set then the icons
--- from /usr/share/icons and /usr/share/icons/hicolor will be used.
-theme.icon_theme                                = nil
-
-return theme
+return M
