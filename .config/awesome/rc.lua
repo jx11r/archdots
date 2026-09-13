@@ -1,5 +1,6 @@
 pcall(require, "luarocks.loader")
 package.loaded["awful.hotkeys_popup.keys.tmux"] = {}
+math.randomseed(os.time())
 
 local gears = require("gears")
 local beautiful = require("beautiful")
