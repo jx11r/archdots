@@ -59,44 +59,30 @@ M.tasklist_buttons = gears.table.join(
 
 -- key bindings
 local keys = gears.table.join(
-  awful.key({ mod, }, "z", hotkeys_popup.show_help,
-    { description = "show help", group = "awesome" }),
-  awful.key({ mod, }, "Escape", awful.tag.history.restore,
-    { description = "go back", group = "tag" }),
-  awful.key({ mod, }, "j",
-    function()
-      awful.client.focus.byidx(1)
-    end,
-    { description = "focus next by index", group = "client" }
-  ),
-  awful.key({ mod, }, "k",
-    function()
-      awful.client.focus.byidx(-1)
-    end,
-    { description = "focus previous by index", group = "client" }
-  ),
-
-  -- layout manipulation
-  awful.key({ mod, "Shift" }, "j", function() awful.client.swap.byidx(1) end,
-    { description = "swap with next client by index", group = "client" }),
-  awful.key({ mod, "Shift" }, "k", function() awful.client.swap.byidx(-1) end,
-    { description = "swap with previous client by index", group = "client" }),
-  awful.key({ mod, "Control" }, "j", function() awful.screen.focus_relative(1) end,
-    { description = "focus the next screen", group = "screen" }),
-  awful.key({ mod, "Control" }, "k", function() awful.screen.focus_relative(-1) end,
-    { description = "focus the previous screen", group = "screen" }),
-  awful.key({ mod, }, "u", awful.client.urgent.jumpto,
-    { description = "jump to urgent client", group = "client" }),
-
-  -- standard program
-  awful.key({ mod, }, "Return", function() awful.spawn(terminal .. " --always-new-process") end,
-    { description = "open terminal", group = "launcher" }),
-  awful.key({ mod, "Shift" }, "Return", function() awful.spawn(terminal .. " --class wt-floating") end,
-    { description = "open terminal (floating)", group = "launcher" }),
   awful.key({ mod, "Control" }, "r", awesome.restart,
     { description = "reload awesome", group = "awesome" }),
   awful.key({ mod, "Control" }, "s", awesome.quit,
     { description = "quit awesome", group = "awesome" }),
+  awful.key({ mod, }, "z", hotkeys_popup.show_help,
+    { description = "show key bindings", group = "awesome" }),
+  awful.key({ mod, }, "Escape", awful.tag.history.restore,
+    { description = "go back", group = "tag" }),
+  awful.key({ mod, "Control" }, "j", function() awful.screen.focus_relative(1) end,
+    { description = "focus the next screen", group = "screen" }),
+  awful.key({ mod, "Control" }, "k", function() awful.screen.focus_relative(-1) end,
+    { description = "focus the previous screen", group = "screen" }),
+
+  -- layout manipulation
+  awful.key({ mod, }, "j", function() awful.client.focus.byidx(1) end,
+    { description = "focus next by index", group = "client" }),
+  awful.key({ mod, }, "k", function() awful.client.focus.byidx(-1) end,
+    { description = "focus previous by index", group = "client" }),
+  awful.key({ mod, "Shift" }, "j", function() awful.client.swap.byidx(1) end,
+    { description = "swap with next client by index", group = "client" }),
+  awful.key({ mod, "Shift" }, "k", function() awful.client.swap.byidx(-1) end,
+    { description = "swap with previous client by index", group = "client" }),
+  awful.key({ mod, }, "u", awful.client.urgent.jumpto,
+    { description = "jump to urgent client", group = "client" }),
   awful.key({ mod, }, "l", function() awful.tag.incmwfact(0.05) end,
     { description = "increase master width factor", group = "layout" }),
   awful.key({ mod, }, "h", function() awful.tag.incmwfact(-0.05) end,
@@ -117,11 +103,15 @@ local keys = gears.table.join(
     end,
     { description = "restore minimized", group = "client" }),
 
-  -- prompt
+  -- apps and tools
+  awful.key({ mod, }, "Return", function() awful.spawn(terminal .. " --always-new-process") end,
+    { description = "open terminal", group = "launcher" }),
+  awful.key({ mod, "Shift" }, "Return", function() awful.spawn(terminal .. " --class wt-floating") end,
+    { description = "open terminal (floating)", group = "launcher" }),
   awful.key({ mod }, "s", function() awful.spawn("rofi -show drun") end,
     { description = "spawn rofi", group = "launcher" }),
-
-  -- apps
+  awful.key({ mod, "Shift" }, "s", function() awful.spawn("rofi -show window") end,
+    { description = "window switcher", group = "apps" }),
   awful.key({ mod }, "b", function() awful.spawn("brave") end,
     { description = "open browser", group = "apps" }),
   awful.key({ mod }, "f", function() awful.spawn("thunar") end,
@@ -129,7 +119,7 @@ local keys = gears.table.join(
   awful.key({}, "Print", function() awful.spawn("flameshot gui") end,
     { description = "take a screenshot", group = "apps" }),
 
-  -- system
+  -- hardware keys
   awful.key({}, "XF86MonBrightnessDown", function() awful.spawn("brightnessctl set 5%-") end),
   awful.key({}, "XF86MonBrightnessUp", function() awful.spawn("brightnessctl set +5%") end),
   awful.key({}, "XF86AudioMute", function() awful.spawn("pamixer --toggle-mute") end),
@@ -165,19 +155,7 @@ M.client_keys = gears.table.join(
       c.maximized = not c.maximized
       c:raise()
     end,
-    { description = "(un)maximize", group = "client" }),
-  awful.key({ mod, "Control" }, "m",
-    function(c)
-      c.maximized_vertical = not c.maximized_vertical
-      c:raise()
-    end,
-    { description = "(un)maximize vertically", group = "client" }),
-  awful.key({ mod, "Shift" }, "m",
-    function(c)
-      c.maximized_horizontal = not c.maximized_horizontal
-      c:raise()
-    end,
-    { description = "(un)maximize horizontally", group = "client" })
+    { description = "(un)maximize", group = "client" })
 )
 
 -- bind all key numbers to tags
