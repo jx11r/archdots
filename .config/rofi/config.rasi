@@ -1,8 +1,8 @@
 configuration {
   modi: "drun,window";
   disable-history: false;
-  display-drun: "";
-  display-window: "󰕰";
+  display-drun: " ";
+  display-window: "󰕰 ";
   drun-display-format: "{name}";
   font: "CaskaydiaCove Nerd Font 10";
   icon-theme: "Papirus";
