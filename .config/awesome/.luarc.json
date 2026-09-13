@@ -1,0 +1,14 @@
+{
+  "workspace.library": [
+    "/usr/share/awesome/lib",
+    "/usr/share/lua/5.3"
+  ],
+  "diagnostics.globals": [
+    "awesome",
+    "client",
+    "screen",
+    "root",
+    "tag",
+    "mouse"
+  ]
+}
