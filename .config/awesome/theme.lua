@@ -40,8 +40,15 @@ local palette = {
   dark5        = "#737aa2",
 }
 
+M.fonts = {
+  text = function(size) return string.format("%s %d", "Hasklug Nerd Font Mono", size) end,
+  icon = function(size) return string.format("%s %d", "Symbols Nerd Font Mono", size) end,
+}
+
 M.dpi = xresources.apply_dpi
 M.palette = palette
+M.font = M.fonts.text(9)
+M.icon_font = M.fonts.icon(10)
 
 M.bg_normal = palette.bg
 M.bg_focus = palette.bg
@@ -57,13 +64,10 @@ M.wibar_bg = M.bg_normal
 M.wibar_fg = M.fg_normal
 M.systray_icon_spacing = 2
 
-M.fonts = {
-  text = function(size) return string.format("%s %d", "Hasklug Nerd Font Mono", size) end,
-  icon = function(size) return string.format("%s %d", "Symbols Nerd Font Mono", size) end,
-}
-
-M.font = M.fonts.text(9)
-M.icon_font = M.fonts.icon(10)
+M.hotkeys_bg = palette.bg_dark
+M.hotkeys_border_width = 2
+M.hotkeys_border_color = palette.blue7
+M.hotkeys_modifiers_fg = palette.blue
 
 -- clients
 M.useless_gap = 5
