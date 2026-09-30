@@ -1,7 +1,4 @@
-local gears = require("gears")
 local awful = require("awful")
-local wibox = require("wibox")
-local beautiful = require("beautiful")
 
 -- execute when a new client appears
 client.connect_signal("manage", function(c)

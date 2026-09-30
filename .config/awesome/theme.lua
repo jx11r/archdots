@@ -1,4 +1,3 @@
-local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local gfs = require("gears.filesystem")
 local helper = require("helper")
