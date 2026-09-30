@@ -26,44 +26,44 @@ awful.screen.connect_for_each_screen(function(s)
   tags.setup(s)
   s.mylayoutbox = awful.widget.layoutbox(s)
 
-  s.mytaglist = custom.taglist {
-    screen   = s,
-    filter   = awful.widget.taglist.filter.all,
-    buttons  = bindings.taglist_buttons,
-    font     = beautiful.fonts.text(15),
+  s.mytaglist = custom.taglist({
+    screen = s,
+    filter = awful.widget.taglist.filter.all,
+    buttons = bindings.taglist_buttons,
+    font = beautiful.fonts.text(15),
     inactive = palette.gray,
-    colors   = tags.colors,
-  }
+    colors = tags.colors,
+  })
 
-  s.mytasklist = awful.widget.tasklist {
-    screen  = s,
-    filter  = awful.widget.tasklist.filter.currenttags,
+  s.mytasklist = awful.widget.tasklist({
+    screen = s,
+    filter = awful.widget.tasklist.filter.currenttags,
     buttons = bindings.tasklist_buttons,
-    style   = {
+    style = {
       fg_normal = palette.gray,
       fg_focus = palette.fg,
-    }
-  }
+    },
+  })
 
   s.mywibox = awful.wibar({
-    position     = "top",
-    screen       = s,
-    stretch      = false,
-    height       = beautiful.dpi(20, s),
+    position = "top",
+    screen = s,
+    stretch = false,
+    height = beautiful.dpi(20, s),
     border_width = 4,
     border_color = beautiful.bg_normal,
-    width        = s.geometry.width - 28,
+    width = s.geometry.width - 28,
   })
 
   s.mywibox.y = 10
   s.mywibox:struts({
-    top = beautiful.dpi(20, s) + 18
+    top = beautiful.dpi(20, s) + 18,
   })
 
-  s.mywibox:setup {
+  s.mywibox:setup({
     widgets.setup(s),
     left = 8,
     right = 8,
     layout = wibox.container.margin,
-  }
+  })
 end)

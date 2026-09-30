@@ -17,22 +17,19 @@ return function(args)
   self.widget:set_text(initial_text)
 
   function self.update()
-    awful.spawn.easy_async_with_shell(
-      command,
-      function(stdout, _, _, exit_code)
-        if exit_code == 0 then
-          local count = 0
-          for _ in stdout:gmatch("[^\r\n]+") do
-            count = count + 1
-          end
-          self.count = count
-          settings(self)
-        else
-          self.count = 0
-          settings(self)
+    awful.spawn.easy_async_with_shell(command, function(stdout, _, _, exit_code)
+      if exit_code == 0 then
+        local count = 0
+        for _ in stdout:gmatch("[^\r\n]+") do
+          count = count + 1
         end
+        self.count = count
+        settings(self)
+      else
+        self.count = 0
+        settings(self)
       end
-    )
+    end)
   end
 
   gears.timer({

@@ -14,18 +14,15 @@ return function(args)
   local settings = args.settings or function(self) end
 
   function self.update()
-    awful.spawn.easy_async(
-      "pamixer --get-volume-human",
-      function(stdout, _, _, exit_code)
-        if exit_code == 0 then
-          self.value = stdout:gsub("%s+", "")
-          settings(self)
-        else
-          self.value = ""
-          settings(self)
-        end
+    awful.spawn.easy_async("pamixer --get-volume-human", function(stdout, _, _, exit_code)
+      if exit_code == 0 then
+        self.value = stdout:gsub("%s+", "")
+        settings(self)
+      else
+        self.value = ""
+        settings(self)
       end
-    )
+    end)
   end
 
   gears.timer({

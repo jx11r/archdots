@@ -3,8 +3,8 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 
 local status_icons = {
-  active   = "",
-  empty    = "",
+  active = "",
+  empty = "",
   occupied = "",
 }
 

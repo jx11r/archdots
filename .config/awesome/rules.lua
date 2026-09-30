@@ -13,8 +13,8 @@ awful.rules.rules = {
       keys = bindings.client_keys,
       buttons = bindings.client_buttons,
       screen = awful.screen.preferred,
-      placement = awful.placement.no_overlap + awful.placement.no_offscreen
-    }
+      placement = awful.placement.no_overlap + awful.placement.no_offscreen,
+    },
   },
 
   -- floating clients
@@ -57,31 +57,30 @@ awful.rules.rules = {
         "AlarmWindow",
         "ConfigManager",
         "pop-up",
-      }
+      },
     },
     properties = {
       floating = true,
       placement = awful.placement.centered,
       ontop = true,
-    }
+    },
   },
 
   -- add titlebars to normal clients and dialogs
   {
-    rule_any = { type = { "normal", "dialog" }
-    },
-    properties = { titlebars_enabled = false }
+    rule_any = { type = { "normal", "dialog" } },
+    properties = { titlebars_enabled = false },
   },
 
   -- tag assignment
-  { rule = { class = "code" },           properties = { tag = "2" } },
+  { rule = { class = "code" }, properties = { tag = "2" } },
   { rule = { class = "jetbrains-idea" }, properties = { tag = "2" } },
-  { rule = { class = "DBeaver" },        properties = { tag = "3" } },
-  { rule = { class = "insomnia" },       properties = { tag = "4" } },
-  { rule = { class = "Gimp" },           properties = { tag = "4" } },
-  { rule = { class = "obs" },            properties = { tag = "4" } },
-  { rule = { class = "Brave-browser" },  properties = { tag = "q" } },
-  { rule = { class = "discord" },        properties = { tag = "w" } },
-  { rule = { class = "Telegram" },       properties = { tag = "w" } },
-  { rule = { class = "cider" },          properties = { tag = "r" } },
+  { rule = { class = "DBeaver" }, properties = { tag = "3" } },
+  { rule = { class = "insomnia" }, properties = { tag = "4" } },
+  { rule = { class = "Gimp" }, properties = { tag = "4" } },
+  { rule = { class = "obs" }, properties = { tag = "4" } },
+  { rule = { class = "Brave-browser" }, properties = { tag = "q" } },
+  { rule = { class = "discord" }, properties = { tag = "w" } },
+  { rule = { class = "Telegram" }, properties = { tag = "w" } },
+  { rule = { class = "cider" }, properties = { tag = "r" } },
 }

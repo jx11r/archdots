@@ -8,58 +8,58 @@ local utils = require("widgets.utils")
 local c = beautiful.palette
 local M = {}
 
-local sep = wibox.widget {
+local sep = wibox.widget({
   markup = utils.fg("󰇙", c.gray),
   align = "center",
   valign = "center",
   font = beautiful.fonts.icon(8),
   widget = wibox.widget.textbox,
-}
+})
 
-local textclock = wibox.widget {
+local textclock = wibox.widget({
   format = utils.fg("%H:%M", c.magenta, true),
   widget = wibox.widget.textclock,
-}
+})
 
-local textdate = wibox.widget {
+local textdate = wibox.widget({
   format = utils.fg("%d/%b", c.blue, true),
   widget = wibox.widget.textclock,
-}
+})
 
-local mem = lain.widget.mem {
+local mem = lain.widget.mem({
   settings = function()
     widget:set_markup(utils.fg(mem_now.used .. "M", c.yellow, true))
-  end
-}
+  end,
+})
 
-local cpu = lain.widget.cpu {
+local cpu = lain.widget.cpu({
   settings = function()
     widget:set_markup(utils.fg(cpu_now.usage .. "%", c.red, true))
-  end
-}
+  end,
+})
 
-local temp = lain.widget.temp {
+local temp = lain.widget.temp({
   format = "%.0f",
   settings = function()
     widget:set_markup(utils.fg(coretemp_now .. "°C", c.orange, true))
-  end
-}
+  end,
+})
 
-local fs_home = lain.widget.fs {
+local fs_home = lain.widget.fs({
   timeout = 60,
   settings = function()
     widget:set_markup(utils.fg(fs_now["/home"].percentage .. "%", c.teal, true))
-  end
-}
+  end,
+})
 
-local fs_root = lain.widget.fs {
+local fs_root = lain.widget.fs({
   timeout = 60,
   settings = function()
     widget:set_markup(utils.fg(fs_now["/"].percentage .. "%", c.green2, true))
-  end
-}
+  end,
+})
 
-local volume = custom.volume {
+local volume = custom.volume({
   timeout = 1,
   settings = function(self)
     local text = self.value
@@ -67,15 +67,15 @@ local volume = custom.volume {
       text = "M"
     end
     self.widget:set_markup(utils.fg(text, c.green, true))
-  end
-}
+  end,
+})
 
-local updates = custom.checkupdates {
+local updates = custom.checkupdates({
   initial_text = "0",
   settings = function(self)
     self.widget:set_markup(utils.fg(self.count, c.purple, true))
-  end
-}
+  end,
+})
 
 function M.setup(s)
   local primary = s.index == 1
