@@ -29,6 +29,11 @@ pacman-contrib
 pamixer
 playerctl
 
+# neovim
+fd
+luarocks
+ripgrep
+tree-sitter-cli
 
 # terminal tools
 bat
