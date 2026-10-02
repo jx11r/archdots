@@ -32,6 +32,8 @@ playerctl
 # neovim
 fd
 luarocks
+npm
+python-pip
 ripgrep
 tree-sitter-cli
 
