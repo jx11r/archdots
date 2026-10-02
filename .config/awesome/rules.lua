@@ -28,6 +28,7 @@ awful.rules.rules = {
       class = {
         "Arandr",
         "Blueman-manager",
+        "flameshot",
         "Gpick",
         "Gpicview",
         "Kruler",
