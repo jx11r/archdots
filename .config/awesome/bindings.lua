@@ -8,10 +8,6 @@ local terminal = "wezterm start"
 local M = {}
 
 -- mouse bindings
-root.buttons(
-  gears.table.join(awful.button({}, 4, awful.tag.viewnext), awful.button({}, 5, awful.tag.viewprev))
-)
-
 M.client_buttons = gears.table.join(
   awful.button({}, 1, function(c)
     c:emit_signal("request::activate", "mouse_click", { raise = true })
