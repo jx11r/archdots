@@ -52,6 +52,7 @@ awful.rules.rules = {
       },
       name = {
         "Event Tester",
+        "Media viewer",
         "Power Manager",
       },
       role = {
